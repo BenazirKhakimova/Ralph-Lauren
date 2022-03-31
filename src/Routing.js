@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./components/Home/Homepage";
-// import Headers from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import AdminPage from "./page/AdminPage";
+import Error404 from "./page/Error404";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -32,7 +32,7 @@ const Routing = () => {
         {ADMIN_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />
         ))}
-        {/* <Route path="*" element={<Error404 />} /> */}
+        <Route path="*" element={<Error404 />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
