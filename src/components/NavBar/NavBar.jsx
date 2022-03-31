@@ -56,18 +56,18 @@ const NavBar = () => {
       </div>
       <div className="navbar">
         {NAV_LIST.map((item) => (
-          <Link className="nav-item" to={item.link} key={item.id}>
+          <Link className="nav-item logo-link" to={item.link} key={item.id}>
             {item.title}
           </Link>
         ))}
-        <Link to="/admin" className="nav-item">
+        <Link to="/admin" className="nav-item logo-link">
           ADMIN
         </Link>
       </div>
       <div className="nav-right">
         {NAV_RIGHT_LIST.map((item) => (
           <Link to={item.link} key={item.id}>
-            <img className="nav_icons" src={item.src} />
+            <img className="nav_icons logo-link" src={item.src} />
           </Link>
         ))}
       </div>
