@@ -12,11 +12,10 @@
 }
 .navBar:hover {
   background: none;
+  color: white;
 }
 .navBar > span:hover {
   color: white;
-}
-.primary-logo {
 }
 .visually-hidden {
   font-size: 42px;
@@ -33,6 +32,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .navbar-item-active {
   margin: 5px 15px;
   color: black;

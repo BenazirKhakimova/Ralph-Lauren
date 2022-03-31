@@ -1,9 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./components/Home/Homepage";
+// import Headers from "./components/Header/Header";
+import NavBar from "./components/NavBar/NavBar";
 import AdminPage from "./page/AdminPage";
 
 const Routing = () => {
-  // let PUBLIC_ROUTES = {};
+  let PUBLIC_ROUTES = [
+    {
+      link: "/",
+      element: <Homepage />,
+      id: 1,
+    },
+  ];
 
   let ADMIN_ROUTES = [
     {
@@ -15,11 +24,11 @@ const Routing = () => {
 
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <NavBar />
       <Routes>
-        {/* {PUBLIC_ROUTES.map((item) => (
+        {PUBLIC_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />
-        ))} */}
+        ))}
         {ADMIN_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />
         ))}

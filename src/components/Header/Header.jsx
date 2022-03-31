@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import Container from "@mui/material/Container";
 import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
