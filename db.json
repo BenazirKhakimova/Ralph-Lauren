@@ -1,3 +1,9 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "t-shirt",
+      "price": 3456,
+      "description": "Awesome! You got this!"
+    }
+  ]
 }
