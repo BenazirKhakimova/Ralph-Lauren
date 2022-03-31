@@ -20,6 +20,8 @@ const AddProducts = () => {
     };
     setNewProduct(product);
   };
+
+  const save = () => {};
   return (
     <div>
       <Box
