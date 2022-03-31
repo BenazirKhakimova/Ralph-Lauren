@@ -1,0 +1,38 @@
+.thirdSection {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn-vzn.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.45/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648729221320/img/202203/20220329-homepage-top/0329_hp_c06_bg.jpg?yocs=1_");
+}
+.thirdSection-block {
+  padding-top: 5%;
+  width: 80vw;
+  margin: 0 auto;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+.thirdSection-block1 {
+  background-color: #f9f9f9;
+}
+.thirdSection-block2 {
+  width: 65%;
+  background-image: url("https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648729221320/img/202203/20220329-homepage-top/0329_hp_c06_img.jpg");
+}
+.thirdSection-title {
+  font-family: Cormorant;
+  font-size: 48px;
+  text-align: center;
+  padding-top: 25%;
+}
+.thirdSection-text {
+  font-family: Le Jeune Deck;
+  max-width: 50%;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 20px;
+  margin: 0 auto;
+}
