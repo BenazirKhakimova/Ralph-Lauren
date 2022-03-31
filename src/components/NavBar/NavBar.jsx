@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 let NAV_LIST = [
@@ -47,7 +47,7 @@ const NAV_RIGHT_LIST = [
   },
 ];
 const NavBar = () => {
-  // const location = useLocation();
+  const location = useLocation();
   return (
     <div className="navBar">
       <div className="primary-logo">
@@ -55,20 +55,19 @@ const NavBar = () => {
       </div>
       <div className="navbar">
         {NAV_LIST.map((item) => (
-          // <Link
-          //   className={
-          //     location.pathname === item.link
-          //       ? "navbar-item-active"
-          //       : "navbar-item"
-          //   }
-          //   to={item.link}
-          //   key={item.id}
-          // >
-          //   {item.title}
-          // </Link>
-          <a className="nav-item">{item.title}</a>
+          <Link
+            className={
+              location.pathname === item.link
+                ? "navbar-item-active"
+                : "navbar-item"
+            }
+            to={item.link}
+            key={item.id}
+          >
+            {item.title}
+          </Link>
         ))}
-        {/* <Link
+        <Link
           to="/admin"
           className={
             location.pathname === "./admin"
@@ -77,22 +76,21 @@ const NavBar = () => {
           }
         >
           ADMIN
-        </Link> */}
+        </Link>
       </div>
       <div className="nav-right">
         {NAV_RIGHT_LIST.map((item) => (
-          // <Link
-          //   className={
-          //     location.pathname === item.link
-          //       ? "navbar-item-active"
-          //       : "navbar-item"
-          //   }
-          //   to={item.link}
-          //   key={item.id}
-          // >
-          //   {item.title}
-          // </Link>
-          <img className="nav_icons" src={item.src} />
+          <Link
+            className={
+              location.pathname === item.link
+                ? "navbar-item-active"
+                : "navbar-item"
+            }
+            to={item.link}
+            key={item.id}
+          >
+            <img className="nav_icons" src={item.src} />
+          </Link>
         ))}
       </div>
     </div>
