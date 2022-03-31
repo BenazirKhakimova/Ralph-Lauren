@@ -1,32 +1,32 @@
 import React from "react";
-// import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 let NAV_LIST = [
   {
     title: "Men",
-    link: "*",
+    link: "/men",
     id: 1,
   },
   {
     title: "Women",
-    link: "*",
+    link: "/women",
     id: 2,
   },
   {
     title: "Home",
-    link: "*",
+    link: "/home",
     id: 3,
   },
   {
     title: "Sale",
-    link: "*",
+    link: "/sale",
     id: 4,
   },
 ];
 const NAV_RIGHT_LIST = [
   {
-    src: "https://cdn-icons.flaticon.com/png/512/4024/premium/4024513.png?token=exp=1648714317~hmac=de77669b32730435638731ff2a8739b4",
+    src: "https://cdn-icons-png.flaticon.com/512/54/54481.png",
     link: "*",
     id: 1,
   },
@@ -47,52 +47,28 @@ const NAV_RIGHT_LIST = [
   },
 ];
 const NavBar = () => {
-  // const location = useLocation();
   return (
     <div className="navBar">
       <div className="primary-logo">
-        <span className="visually-hidden">Ralph Lauren</span>
+        <Link className="logo-link" to="/">
+          <span className="visually-hidden">Ralph Lauren</span>
+        </Link>
       </div>
       <div className="navbar">
         {NAV_LIST.map((item) => (
-          // <Link
-          //   className={
-          //     location.pathname === item.link
-          //       ? "navbar-item-active"
-          //       : "navbar-item"
-          //   }
-          //   to={item.link}
-          //   key={item.id}
-          // >
-          //   {item.title}
-          // </Link>
-          <a className="nav-item">{item.title}</a>
+          <Link className="nav-item" to={item.link} key={item.id}>
+            {item.title}
+          </Link>
         ))}
-        {/* <Link
-          to="/admin"
-          className={
-            location.pathname === "./admin"
-              ? "navbar-item-active"
-              : "navbar-item"
-          }
-        >
+        <Link to="/admin" className="nav-item">
           ADMIN
-        </Link> */}
+        </Link>
       </div>
       <div className="nav-right">
         {NAV_RIGHT_LIST.map((item) => (
-          // <Link
-          //   className={
-          //     location.pathname === item.link
-          //       ? "navbar-item-active"
-          //       : "navbar-item"
-          //   }
-          //   to={item.link}
-          //   key={item.id}
-          // >
-          //   {item.title}
-          // </Link>
-          <img className="nav_icons" src={item.src} />
+          <Link to={item.link} key={item.id}>
+            <img className="nav_icons" src={item.src} />
+          </Link>
         ))}
       </div>
     </div>
