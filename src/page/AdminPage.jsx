@@ -1,11 +1,11 @@
 import React from "react";
-import AddProduuct from "../AddProducts/AddProduuct";
+import CreateProduct from "../CreateProduct/CreateProduct";
 import AdminList from "../components/AdminList/AdminList";
-
+// import "./AdminPage.css";
 const AdminPage = () => {
   return (
-    <div>
-      <AddProduuct />
+    <div className="pages-mt">
+      <CreateProduct />
       <AdminList />
     </div>
   );

@@ -24,17 +24,17 @@ const Routing = () => {
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 1,
+      id: 10,
     },
     {
       link: "/list",
       element: <AdminList />,
-      id: 2,
+      id: 11,
     },
     {
       link: "/edit/:id",
       element: <EditProduct />,
-      id: 3,
+      id: 12,
     },
   ];
 

@@ -40,7 +40,7 @@ const ProductsContextProvider = ({ children }) => {
     dispatch(action);
   };
 
-  const AddProduct = async (newProduct) => {
+  const createProduct = async (newProduct) => {
     await axios.post(PRODUCTS_API, newProduct);
     getProducts();
   };
@@ -49,16 +49,18 @@ const ProductsContextProvider = ({ children }) => {
     await axios.delete(`${PRODUCTS_API}/${id}`);
     getProducts();
   };
+
   const getOneProduct = async (id, editedProduct) => {
     await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
     getProducts();
   };
+
   return (
     <contextProduct.Provider
       value={{
         products: state.products,
         getProducts,
-        AddProduct,
+        createProduct,
         deleteProduct,
         getOneProduct,
       }}

@@ -6,3 +6,15 @@
 body {
   width: 100%;
 }
+.pages-mt {
+  padding: 8%;
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/img/photo_2022-04-01_20-06-02.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: scrolls;
+
+  /* margin: 90px; */
+}
