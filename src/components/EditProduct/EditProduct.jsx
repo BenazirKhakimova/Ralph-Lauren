@@ -13,7 +13,6 @@ const EditProduct = () => {
   return (
     <div className="container">
       <h2>Edit product</h2>
-      <Form></Form>
     </div>
   );
 };

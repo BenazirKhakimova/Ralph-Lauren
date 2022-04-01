@@ -49,7 +49,7 @@ const ProductsContextProvider = ({ children }) => {
     await axios.delete(`${PRODUCTS_API}/${id}`);
     getProducts();
   };
-  const editProduct = async (id, editedProduct) => {
+  const getOneProduct = async (id, editedProduct) => {
     await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
     getProducts();
   };
@@ -60,7 +60,7 @@ const ProductsContextProvider = ({ children }) => {
         getProducts,
         AddProduct,
         deleteProduct,
-        editProduct,
+        getOneProduct,
       }}
     >
       {children}

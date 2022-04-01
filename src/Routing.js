@@ -4,6 +4,8 @@ import Homepage from "./components/Home/Homepage";
 import NavBar from "./components/NavBar/NavBar";
 import AdminPage from "./page/AdminPage";
 import Error404 from "./page/Error404";
+import EditProduct from "./components/EditProduct/EditProduct";
+import AdminList from "./components/AdminList/AdminList";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -12,6 +14,10 @@ const Routing = () => {
       element: <Homepage />,
       id: 1,
     },
+    {
+      link: "/details/:id",
+      id: 4,
+    },
   ];
 
   let ADMIN_ROUTES = [
@@ -19,6 +25,16 @@ const Routing = () => {
       link: "/admin",
       element: <AdminPage />,
       id: 1,
+    },
+    {
+      link: "/list",
+      element: <AdminList />,
+      id: 2,
+    },
+    {
+      link: "/edit/:id",
+      element: <EditProduct />,
+      id: 3,
     },
   ];
 

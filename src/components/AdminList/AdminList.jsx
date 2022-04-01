@@ -1,29 +1,42 @@
-import { Avatar, List } from "antd";
-import React, { useContext, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { List, Avatar, Popconfirm, message } from "antd";
+import { QuestionCircleOutlined } from "@ant-design/icons";
+import VirtualList from "rc-virtual-list";
 import { Link } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
-import VirtualList from "rc-virtual-list";
 
 const AdminList = () => {
   const { getProducts, products, deleteProduct } = useContext(contextProduct);
-  useEffect(() => getProducts(), []);
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <>
-      <List style={{ width: "100%" }}>
+      <List>
         <VirtualList data={products} itemHeight={47} itemKey="email">
           {(item) => (
             <List.Item key={item.id}>
               <List.Item.Meta
-                avatar={<Avatar src={item.image} />}
-                title={<a href="#">{item.title}</a>}
-                description={item.description}
+                avatar={<Avatar src={item.image1} />}
+                title={
+                  <a href="#">
+                    {item.brand},{item.title}
+                  </a>
+                }
               />
-              <a onClick={() => deleteProduct(item.id)}>Delete</a>
-              <Link to={`/edit/:${item.id}`} style={{ margin: "auto 20px" }}>
+              <Popconfirm
+                title="Are you sure?"
+                icon={<QuestionCircleOutlined style={{ color: "red" }} />}
+              >
+                <a href="#" onClick={() => deleteProduct(item.id)}>
+                  Delete
+                </a>
+              </Popconfirm>
+              <Link to={`/edit/${item.id}`} style={{ margin: "auto 20px" }}>
                 Edit
               </Link>
-              <Link to={`/description`}>Description</Link>
+              <Link to={`/products/${item.id}`}>Details</Link>
             </List.Item>
           )}
         </VirtualList>
