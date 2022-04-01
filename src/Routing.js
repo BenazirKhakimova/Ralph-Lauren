@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Home/Homepage";
 import NavBar from "./components/NavBar/NavBar";
 import AdminPage from "./page/AdminPage";
 import Error404 from "./page/Error404";
 import EditProduct from "./components/EditProduct/EditProduct";
 import AdminList from "./components/AdminList/AdminList";
-
+import Men from "./components/Men/Men";
+import Women from "./components/Women/Women";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -15,8 +17,14 @@ const Routing = () => {
       id: 1,
     },
     {
-      link: "/details/:id",
-      id: 4,
+      link: "/men",
+      element: <Men />,
+      id: 2,
+    },
+    {
+      link: "/women",
+      element: <Women />,
+      id: 3,
     },
   ];
 
@@ -50,7 +58,7 @@ const Routing = () => {
         ))}
         <Route path="*" element={<Error404 />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };

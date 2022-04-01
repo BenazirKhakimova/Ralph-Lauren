@@ -1,0 +1,53 @@
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.moreSection {
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+.moreSection-title {
+  font-size: 48px;
+  font-family: Cormorant;
+  text-align: center;
+  font-weight: 600;
+}
+.moreSection-blocks {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.moreSection-block {
+  max-width: 450px;
+}
+.moreSection-img {
+  width: 100%;
+}
+.moreSection-text {
+  color: #4a5d71;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: Cormorant;
+}
+.moreSection-link {
+  color: #4a5d71;
+  font-family: Le Jeune Deck;
+  padding-bottom: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 200px;
+  border-bottom: 1px solid #4a5d71;
+  transition: 0.3s ease-in-out;
+}
+.moreSection-link:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #4a5d71;
+}
