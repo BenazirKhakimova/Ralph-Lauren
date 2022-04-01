@@ -1,0 +1,49 @@
+.carousel-women {
+  width: 100%;
+}
+.text-header {
+  margin-top: -10%;
+}
+.women-shop {
+  margin-top: 50px;
+}
+.women-shop__title {
+  font-size: 48px;
+  font-weight: 600;
+}
+.women-shop__blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.women-shop__block {
+  max-width: 400px;
+}
+.women-shop__img {
+  width: 100%;
+}
+.women-shop__block p {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.women-shop-block2 {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("./images/0329_wlp_c03_imgimage1.jpg");
+}
+.women-shop-text1 {
+  text-align: center;
+  font-size: 68px;
+  font-weight: 700;
+  color: white;
+  font-family: Cormorant;
+  padding-top: 25%;
+}
+.women-shop-text2 {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  font-family: Northwell;
+}
