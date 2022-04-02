@@ -20,7 +20,7 @@ const reducer = (state = INIT_STATE, action) => {
     case CASE_GET_ONE_PRODUCT:
       return {
         ...state,
-        oneProducts: action.payload.data,
+        oneProduct: action.payload.data,
       };
     default:
       return state;
@@ -32,41 +32,47 @@ const ProductsContextProvider = ({ children }) => {
 
   const getProducts = async () => {
     let result = await axios(PRODUCTS_API);
-    // console.log(result);
-    let action = {
+    dispatch({
       type: CASE_GET_PRODUCTS,
       payload: result,
+    });
+
+    const createProduct = async (newProduct) => {
+      await axios.post(PRODUCTS_API, newProduct);
+      getProducts();
     };
-    dispatch(action);
-  };
 
-  const createProduct = async (newProduct) => {
-    await axios.post(PRODUCTS_API, newProduct);
-    getProducts();
-  };
+    const deleteProduct = async (id) => {
+      await axios.delete(`${PRODUCTS_API}/${id}`);
+      getProducts();
+    };
 
-  const deleteProduct = async (id) => {
-    await axios.delete(`${PRODUCTS_API}/${id}`);
-    getProducts();
+    const getOneProduct = async (id) => {
+      let result = await axios.patch(`${PRODUCTS_API}/${id}`);
+      dispatch({
+        type: getOneProduct,
+        payload: result,
+      });
+      getProducts();
+    };
+    const upDateProduct = async (id, editedProduct) => {
+      await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
+      getProducts();
+    };
+    return (
+      <contextProduct.Provider
+        value={{
+          products: state.products,
+          oneProduct: state.oneProduct.getProducts,
+          createProduct,
+          deleteProduct,
+          getOneProduct,
+          upDateProduct,
+        }}
+      >
+        {children}
+      </contextProduct.Provider>
+    );
   };
-
-  const getOneProduct = async (id, editedProduct) => {
-    await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
-    getProducts();
-  };
-
-  return (
-    <contextProduct.Provider
-      value={{
-        products: state.products,
-        getProducts,
-        createProduct,
-        deleteProduct,
-        getOneProduct,
-      }}
-    >
-      {children}
-    </contextProduct.Provider>
-  );
 };
 export default ProductsContextProvider;

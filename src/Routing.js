@@ -9,6 +9,7 @@ import EditProduct from "./components/EditProduct/EditProduct";
 import AdminList from "./components/AdminList/AdminList";
 import Men from "./components/Men/Men";
 import Women from "./components/Women/Women";
+import Details from "./components/Details/Details";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -25,6 +26,11 @@ const Routing = () => {
       link: "/women",
       element: <Women />,
       id: 3,
+    },
+    {
+      link: "/details",
+      element: <Details />,
+      id: 4,
     },
   ];
 
