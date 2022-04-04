@@ -9,8 +9,11 @@ import EditProduct from "./components/EditProduct/EditProduct";
 import AdminList from "./components/AdminList/AdminList";
 import Men from "./components/Men/Men";
 import Women from "./components/Women/Women";
-import Details from "./DetailsProduct/Details";
-// import Details from "./DetailsProduct/Details";
+import SweatersMen from "./components/SweatersMen/SweatersMen";
+import FootwearMen from "./components/FootwearMen/FootwearMen";
+import PoloMen from "./components/PoloMen/PoloMen";
+import Details from "./components/Details/Details";
+import DetailsProduct from "./DetailsProduct/DetailsProduct";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -29,10 +32,31 @@ const Routing = () => {
       id: 3,
     },
     {
-      link: "/details/:id",
-      element: <Details/>,
+      link: "/men/sweaters",
+      element: <SweatersMen />,
       id: 4,
     },
+    {
+      link: "/men/footwear",
+      element: <FootwearMen />,
+      id: 5,
+    },
+    {
+      link: "/polo",
+      element: <PoloMen />,
+      id: 6,
+    },
+    {
+      link: "/men/polo/polo1",
+      element: <Details />,
+      id: 7,
+    },
+    {
+      link: '/details/:id',
+      element: <DetailsProduct/>,
+      id: 8
+
+    }
   ];
 
   let ADMIN_ROUTES = [

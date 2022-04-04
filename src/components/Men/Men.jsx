@@ -5,6 +5,7 @@ import TextHeader from "../Header/TextHeader";
 import ThirdSection from "../ThirdSection/ThirdSection";
 import Card from "../Card/Card";
 import Recommended from "../Recommended/Recommended";
+import { Link } from "react-router-dom";
 
 const arrayVideos = [
   {
@@ -39,30 +40,36 @@ const Men = () => {
       <div className="men-shop container">
         <h1 className="men-shop__title">Men: Shop by Category</h1>
         <div className="men-shop__blocks">
-          <div className="men-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02b_img.jpg"
-              alt=""
-              className="men-shop__img"
-            />
-            <p>sweaters</p>
-          </div>
-          <div className="men-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02c_img.jpg"
-              alt=""
-              className="men-shop__img"
-            />
-            <p>Footwear</p>
-          </div>
-          <div className="men-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02d_img.jpg"
-              alt=""
-              className="men-shop__img"
-            />
-            <p>Polo shirts</p>
-          </div>
+          <Link to="/men/sweaters">
+            <div className="men-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02b_img.jpg"
+                alt=""
+                className="men-shop__img"
+              />
+              <p>sweaters</p>
+            </div>
+          </Link>
+          <Link to="/men/footwear">
+            <div className="men-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02c_img.jpg"
+                alt=""
+                className="men-shop__img"
+              />
+              <p>Footwear</p>
+            </div>
+          </Link>
+          <Link to="/polo">
+            <div className="men-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02d_img.jpg"
+                alt=""
+                className="men-shop__img"
+              />
+              <p>Polo shirts</p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="men-shop-block2">

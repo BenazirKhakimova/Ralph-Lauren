@@ -15,15 +15,24 @@
   display: flex;
   justify-content: space-between;
 }
+.men-shop__block:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .men-shop__block {
+  margin-bottom: 35px;
+  padding: 25px;
   max-width: 400px;
 }
 .men-shop__img {
   width: 100%;
 }
 .men-shop__block p {
+  padding-top: 10px;
   font-size: 36px;
   text-transform: uppercase;
+}
+.men-shop__block p:hover {
+  color: blueviolet;
 }
 .men-shop-block2 {
   width: 100vw;

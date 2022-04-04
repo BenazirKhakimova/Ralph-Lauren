@@ -71,3 +71,44 @@
   background-size: cover;
   overflow-y: scrolls;
 }
+.collection-blocks {
+  background-size: 100%;
+  background-image: url("https://cdn-vzn.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.45/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw90532b34/img/202105/20210518-m-prl-shop-all-mb/20210518_new_m_shop_all_polo_shirt_c01_mood_banner.jpg?yocs=1_");
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+}
+.collection-block {
+  margin-top: 22%;
+}
+.collection-title {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 62px;
+  font-weight: 550;
+  letter-spacing: 3px;
+  color: white;
+  font-family: Copyright Klim Type Foundry;
+}
+.collections p {
+  padding-top: 10px;
+  font-size: 68px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: black;
+  font-family: Northwell;
+}
+.details-blocks {
+  margin-top: 10%;
+  display: flex;
+}
+.details-block-l {
+  max-width: 70%;
+  display: flex;
+}
+.detail-block-img {
+  width: 100%;
+  padding-left: 15px;
+}

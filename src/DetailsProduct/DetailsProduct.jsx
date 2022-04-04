@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { contextProduct } from '../context/ProductContext';
 import Loading from '../Loading/Loading';
 
-const Details = () => {
+const DetailsProduct = () => {
     const { getOneProduct, oneProduct } = useContext(contextProduct)
     const params = useParams()
     console.log(params)
@@ -42,4 +42,4 @@ const Details = () => {
     ) : <Loading/>
 };
 
-export default Details;
+export default DetailsProduct;

@@ -1,3 +1,4 @@
+import { SearchOutlined } from "@ant-design/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -15,7 +16,7 @@ let NAV_LIST = [
   },
   {
     title: "Home",
-    link: "/home",
+    link: "/home",  
     id: 3,
   },
   {
@@ -24,31 +25,9 @@ let NAV_LIST = [
     id: 4,
   },
 ];
-const NAV_RIGHT_LIST = [
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/54/54481.png",
-    link: "*",
-    id: 1,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
-    link: "*",
-    id: 2,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/747/747376.png",
-    link: "*",
-    id: 3,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/694/694575.png",
-    link: "*",
-    id: 4,
-  },
-];
 const NavBar = () => {
   return (
-    <div className="navBar">
+    <div className="navigation">
       <div className="primary-logo">
         <Link className="logo-link" to="/">
           <span className="visually-hidden">Ralph Lauren</span>
@@ -65,11 +44,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="nav-right">
-        {NAV_RIGHT_LIST.map((item) => (
-          <Link to={item.link} key={item.id}>
-            <img className="nav_icons logo-link" src={item.src} />
-          </Link>
-        ))}
+        <SearchOutlined />
       </div>
     </div>
   );

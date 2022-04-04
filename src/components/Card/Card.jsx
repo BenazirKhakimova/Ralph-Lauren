@@ -1,3 +1,8 @@
+import {
+  DeleteOutlined,
+  EllipsisOutlined,
+  HeartOutlined,
+} from "@ant-design/icons";
 import React from "react";
 import "./Card.css";
 
@@ -10,6 +15,11 @@ const Card = () => {
         Silk Ikat-Print Pochette
       </a>
       <h2 className="card-price">$1,590.00</h2>
+      <div className="card-footer">
+        <HeartOutlined className="icon-card" />
+        <EllipsisOutlined className="icon-card" />
+        <DeleteOutlined className="icon-card" />
+      </div>
     </div>
   );
 };
