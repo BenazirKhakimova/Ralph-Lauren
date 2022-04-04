@@ -4,7 +4,7 @@
   padding: 0;
   text-decoration: none;
   outline: none;
-  font-family: Cormorant;
+  /* font-family: Cormorant; */
 }
 .container {
   max-width: 80%;
