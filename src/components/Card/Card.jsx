@@ -2,23 +2,36 @@ import {
   DeleteOutlined,
   EllipsisOutlined,
   HeartOutlined,
+  ShoppingOutlined,
 } from "@ant-design/icons";
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
-const Card = () => {
+const Card = ({ item }) => {
+  const [image, setImage] = useState(false);
   return (
     <div className="card">
-      <div className="card-img"></div>
-      <h1 className="card-title">Ralph Lauren Collection</h1>
+      <img
+        src={image ? item.image1 : item.image2}
+        onMouseEnter={() => setImage(true)}
+        onMouseLeave={() => setImage(false)}
+      />
+      <h1 className="card-title">{item.brand}</h1>
       <a href="#" className="card-desc">
-        Silk Ikat-Print Pochette
+        {item.title}
       </a>
-      <h2 className="card-price">$1,590.00</h2>
+      <h2 className="card-price">{item.price}</h2>
       <div className="card-footer">
         <HeartOutlined className="icon-card" />
-        <EllipsisOutlined className="icon-card" />
-        <DeleteOutlined className="icon-card" />
+        <Link to={`/details/${item.id}`}>
+          <EllipsisOutlined
+            key="1"
+            style={{ cursor: "pointer" }}
+            className="icon-card"
+          />
+        </Link>
+        <ShoppingOutlined className="icon-card" />
       </div>
     </div>
   );

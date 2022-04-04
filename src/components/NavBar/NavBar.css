@@ -42,3 +42,32 @@
   display: flex;
   justify-content: space-between;
 }
+.subMenu {
+  display: none !important;
+}
+/* Media */
+@media only screen and (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+  .subMenu {
+    display: block !important;
+  }
+  .nav-right {
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+  }
+  .menu {
+    display: flex;
+  }
+  .submenu-title {
+    color: black;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .nav-right {
+    margin-left: 100px;
+  }
+}

@@ -162,3 +162,36 @@
 .icon-card {
   font-size: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  .text-header {
+    left: 35%;
+  }
+  .text-header-top p {
+    font-size: 58px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .text-header {
+    left: 28%;
+  }
+  .text-header-top p {
+    font-size: 48px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .text-header {
+    left: 17%;
+  }
+  .text-header-top p {
+    font-size: 48px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+}
