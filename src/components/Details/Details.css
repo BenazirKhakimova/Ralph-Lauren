@@ -1,0 +1,73 @@
+.description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.right-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.cart-input {
+  height: 54px;
+  text-transform: none;
+  font-family: Founders Grotesk text Regular, Helvetica, Arial, sans-serif;
+  font-style: Normal;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  letter-spacing: 0.25px;
+  color: #6d6f73;
+}
+.cart-input-button {
+  background-color: #041e3a;
+  border: 1px solid #041e3a;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin: 15px 0 0;
+  min-height: 3.25rem;
+  padding: 0.9375rem 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  outline: 0;
+  width: 100%;
+  line-height: 1.25rem;
+  font-style: Normal;
+  font-weight: 500;
+  font-family: "Space Mono", monospace;
+}
+.store-title {
+  font-family: Copyright Klim Type Foundry;
+  text-transform: uppercase;
+}
+.reviews {
+  text-transform: uppercase;
+  color: #9cb8e8;
+}
+.description {
+  background: 0 0;
+  cursor: pointer;
+  letter-spacing: auto;
+  min-height: auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: auto;
+  border: 0;
+  border-bottom: 1px;
+  font-family: "Space Mono";
+  font-style: Normal;
+  font-weight: 500;
+  color: #6d6f73;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0 0 0.4rem;
+}

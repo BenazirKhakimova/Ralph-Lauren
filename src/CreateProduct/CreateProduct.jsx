@@ -26,7 +26,13 @@ const CreateProduct = () => {
 
   return (
     <div style={{ display: "flex", justifyContent: "flex-end" }}>
-      <Button type="primary" onClick={showModal}>
+      <Button
+        style={{
+          backgroundColor: "#041E3A",
+          color: "white",
+        }}
+        onClick={showModal}
+      >
         Add Product
       </Button>
       {/* brand , title, price, description, image1, image2, image3, video , clothes*/}

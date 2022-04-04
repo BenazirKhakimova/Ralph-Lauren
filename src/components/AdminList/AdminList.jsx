@@ -5,6 +5,7 @@ import VirtualList from "rc-virtual-list";
 import { Link } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
 import "./AdminList.css";
+import { Popconfirm, message, Button } from "antd";
 
 const AdminList = () => {
   const { getProducts, products, deleteProduct } = useContext(contextProduct);
@@ -13,54 +14,68 @@ const AdminList = () => {
     getProducts();
   }, []);
 
+  const text = "Are you sure to delete this task?";
+
+  function confirm() {
+    message.info("The product has been removed.");
+  }
+
   return (
     <>
-      <div>
+      <div
+        style={{
+          boxShadow: "0 3px 5px white",
+          padding: "15px",
+          margin: "15px",
+        }}
+      >
         <List>
           <VirtualList data={products} itemHeight={47}>
             {(item) => (
-              <List.Item key={item.id}>
+              <List.Item key={item.id} style={{ margin: "5px" }}>
                 <List.Item.Meta
                   avatar={<Avatar src={item.image1} />}
                   title={
                     <span
                       href="#"
                       style={{
-                        color: "black",
+                        color: "#041E3A",
                         cursor: "pointer",
                         fontSize: "large",
                         fontWeight: 900,
                         fontFamily: "LeJeuneDeck",
                       }}
                     >
-                      {item.brand},{item.title}
+                      {item.brand} {item.title}
                     </span>
                   }
                 />
                 {/* <Popconfirm
-                  title="Are you sure?"
-                  icon={<QuestionCircleOutlined style={{ color: "red" }} />}
+                  placement="top"
+                  title={text}
+                  onConfirm={confirm}
+                  okButtonProps={deleteProduct(item.id)}
+                  cancelText="No"
                 >
-                  
+                  <span
+                    style={{
+                      color: "#041E3A",
+                      cursor: "pointer",
+                      fontSize: "large",
+                      fontWeight: 900,
+                      fontFamily: "LeJeuneDeck",
+                    }}
+                    href="#"
+                  >
+                    Delete
+                  </span>
                 </Popconfirm> */}
-                <span
-                  style={{
-                    color: "black",
-                    cursor: "pointer",
-                    fontSize: "large",
-                    fontWeight: 900,
-                    fontFamily: "LeJeuneDeck",
-                  }}
-                  href="#"
-                  onClick={() => deleteProduct(item.id)}
-                >
-                  Delete
-                </span>
+
                 <Link
                   to={`/edit/${item.id}`}
                   style={{
                     margin: "auto 20px",
-                    color: "black",
+                    color: "#041E3A",
                     cursor: "pointer",
                     fontSize: "large",
                     fontWeight: 900,
@@ -70,9 +85,9 @@ const AdminList = () => {
                   Edit
                 </Link>
                 <Link
-                  to={`/products/${item.id}`}
+                  to={`/details/${item.id}`}
                   style={{
-                    color: "black",
+                    color: "#041E3A",
                     cursor: "pointer",
                     fontSize: "large",
                     fontWeight: 900,
