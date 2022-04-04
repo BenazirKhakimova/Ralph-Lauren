@@ -23,7 +23,6 @@ const AdminList = () => {
     <>
       <div
         style={{
-          boxShadow: "0 3px 5px white",
           padding: "15px",
           margin: "15px",
         }}
@@ -49,14 +48,6 @@ const AdminList = () => {
                     </span>
                   }
                 />
-                {/* <Popconfirm
-                  placement="top"
-                  title={text}
-                  onConfirm={confirm}
-                  okText='Yes'
-                  cancelText="No"
-                >
-                </Popconfirm> */}
                   <span
                     style={{
                       color: "#041E3A",

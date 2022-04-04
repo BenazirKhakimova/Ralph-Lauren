@@ -12,7 +12,6 @@ import Women from "./components/Women/Women";
 import SweatersMen from "./components/SweatersMen/SweatersMen";
 import FootwearMen from "./components/FootwearMen/FootwearMen";
 import PoloMen from "./components/PoloMen/PoloMen";
-import Details from "./components/Details/Details";
 import DetailsProduct from "./DetailsProduct/DetailsProduct";
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -32,12 +31,12 @@ const Routing = () => {
       id: 3,
     },
     {
-      link: "/men/sweaters",
+      link: "/sweaters",
       element: <SweatersMen />,
       id: 4,
     },
     {
-      link: "/men/footwear",
+      link: "/footwear",
       element: <FootwearMen />,
       id: 5,
     },
@@ -47,16 +46,10 @@ const Routing = () => {
       id: 6,
     },
     {
-      link: "/men/polo/polo1",
-      element: <Details />,
+      link: "/details/:id",
+      element: <DetailsProduct />,
       id: 7,
     },
-    {
-      link: '/details/:id',
-      element: <DetailsProduct/>,
-      id: 8
-
-    }
   ];
 
   let ADMIN_ROUTES = [
