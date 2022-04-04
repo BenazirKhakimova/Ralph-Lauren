@@ -1,3 +1,9 @@
+import {
+  HeartOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -24,28 +30,6 @@ let NAV_LIST = [
     id: 4,
   },
 ];
-const NAV_RIGHT_LIST = [
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/54/54481.png",
-    link: "*",
-    id: 1,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
-    link: "*",
-    id: 2,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/747/747376.png",
-    link: "*",
-    id: 3,
-  },
-  {
-    src: "https://cdn-icons-png.flaticon.com/512/694/694575.png",
-    link: "*",
-    id: 4,
-  },
-];
 const NavBar = () => {
   return (
     <div className="navigation">
@@ -65,11 +49,10 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="nav-right">
-        {NAV_RIGHT_LIST.map((item) => (
-          <Link to={item.link} key={item.id}>
-            <img className="nav_icons logo-link" src={item.src} />
-          </Link>
-        ))}
+        <SearchOutlined style={{ fontSize: "24px" }} />
+        <ShoppingCartOutlined style={{ fontSize: "24px" }} />
+        <HeartOutlined style={{ fontSize: "24px" }} />
+        <UserOutlined style={{ fontSize: "24px" }} />
       </div>
     </div>
   );

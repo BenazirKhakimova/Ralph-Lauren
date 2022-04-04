@@ -7,19 +7,6 @@ const Collection = () => {
   return (
     <div className="collections container">
       <p>Polo Shirts</p>
-
-      <div className="collection">
-        <Link to="/polo1">
-          <Card />
-        </Link>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
     </div>
   );
 };

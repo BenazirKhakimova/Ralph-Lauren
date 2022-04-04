@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { List, Avatar, Popconfirm, message, Col } from "antd";
-import { QuestionCircleOutlined } from "@ant-design/icons";
+import React, {  useEffect, useContext } from "react";
+import { List, Avatar, Popconfirm,  message } from "antd";
 import VirtualList from "rc-virtual-list";
 import { Link } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
 import "./AdminList.css";
-import { Popconfirm, message, Button } from "antd";
+
 
 const AdminList = () => {
   const { getProducts, products, deleteProduct } = useContext(contextProduct);
@@ -14,11 +13,11 @@ const AdminList = () => {
     getProducts();
   }, []);
 
-  const text = "Are you sure to delete this task?";
+//   const text = "Are you sure to delete this task?";
 
-  function confirm() {
-    message.info("The product has been removed.");
-  }
+//   function confirm() {
+//     message.info("The product has been removed.");
+//   }
 
   return (
     <>
@@ -54,9 +53,10 @@ const AdminList = () => {
                   placement="top"
                   title={text}
                   onConfirm={confirm}
-                  okButtonProps={deleteProduct(item.id)}
+                  okText='Yes'
                   cancelText="No"
                 >
+                </Popconfirm> */}
                   <span
                     style={{
                       color: "#041E3A",
@@ -66,10 +66,10 @@ const AdminList = () => {
                       fontFamily: "LeJeuneDeck",
                     }}
                     href="#"
+                    onClick={()=>deleteProduct(item.id)}
                   >
                     Delete
                   </span>
-                </Popconfirm> */}
 
                 <Link
                   to={`/edit/${item.id}`}

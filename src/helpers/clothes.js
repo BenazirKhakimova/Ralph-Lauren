@@ -21,6 +21,36 @@ export const clothes = [
   },
   {
     clothe: "JACKETS",
-    id: 2,
+    id: 6,
   },
 ];
+
+export const men = [
+    {
+      clothes: "SWEATERS",
+      id: 7,
+    },
+    {
+      clothes: "FOOTWEAR",
+      id: 8,
+    },
+    {
+      clothes: "POLO SHIRTS",
+      id: 9,
+    }
+]
+
+export const women = [
+  {
+    clothe: "DRESSES",
+    id: 10,
+  },
+  {
+    clothe: "HANDBAGS",
+    id: 11,
+  },
+  {
+    clothe: "JACKETS",
+    id: 12,
+  }
+]

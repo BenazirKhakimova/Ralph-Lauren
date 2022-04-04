@@ -112,3 +112,53 @@
   width: 100%;
   padding-left: 15px;
 }
+.card {
+  cursor: pointer;
+  width: 400px;
+  height: 100%;
+  margin: 25px 25px;
+  padding-bottom: 25px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.card-img {
+  width: 100%;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://www.rlmedia.io/is/image/PoloGSI/s7-1429052_alternate10?$plpDeskRF$");
+}
+.card-img:hover {
+  background-image: url("https://www.rlmedia.io/is/image/PoloGSI/s7-1429052_lifestyle?$plpDeskRF$");
+}
+.card-title {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 24px;
+  color: rgb(85, 84, 84);
+  font-family: Copyright Klim Type Foundry;
+  letter-spacing: 1px;
+}
+.card-desc {
+  padding-left: 20px;
+  font-family: Copyright Klim Type Foundry;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.card-price {
+  padding-left: 20px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  font-family: Le Jeune Deck;
+  font-size: 20px;
+}
+.card-footer {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.icon-card {
+  font-size: 24px;
+}

@@ -6,12 +6,12 @@ import MoreSection from "../MoreSection/MoreSection";
 import CarouselSection from "../CarouselSection/CarouselSection";
 const Homepage = () => {
   return (
-    <div style={{ background: "red", height: "100vh" }}>
+    <div>
       <Header />
-      {/* <FirstSection />
+      <FirstSection />
       <ThirdSection />
       <CarouselSection />
-      <MoreSection /> */}
+      <MoreSection />
     </div>
   );
 };
