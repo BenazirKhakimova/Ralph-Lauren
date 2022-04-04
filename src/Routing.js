@@ -9,7 +9,8 @@ import EditProduct from "./components/EditProduct/EditProduct";
 import AdminList from "./components/AdminList/AdminList";
 import Men from "./components/Men/Men";
 import Women from "./components/Women/Women";
-import Details from "./components/Details/Details";
+import Details from "./DetailsProduct/Details";
+// import Details from "./DetailsProduct/Details";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -28,8 +29,8 @@ const Routing = () => {
       id: 3,
     },
     {
-      link: "/details",
-      element: <Details />,
+      link: "/details/:id",
+      element: <Details/>,
       id: 4,
     },
   ];
