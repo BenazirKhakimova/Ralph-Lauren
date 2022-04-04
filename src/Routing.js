@@ -9,6 +9,10 @@ import EditProduct from "./components/EditProduct/EditProduct";
 import AdminList from "./components/AdminList/AdminList";
 import Men from "./components/Men/Men";
 import Women from "./components/Women/Women";
+import SweatersMen from "./components/SweatersMen/SweatersMen";
+import FootwearMen from "./components/FootwearMen/FootwearMen";
+import PoloMen from "./components/PoloMen/PoloMen";
+import Details from "./components/Details/Details";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -25,6 +29,26 @@ const Routing = () => {
       link: "/women",
       element: <Women />,
       id: 3,
+    },
+    {
+      link: "/men/sweaters",
+      element: <SweatersMen />,
+      id: 4,
+    },
+    {
+      link: "/men/footwear",
+      element: <FootwearMen />,
+      id: 5,
+    },
+    {
+      link: "/polo",
+      element: <PoloMen />,
+      id: 6,
+    },
+    {
+      link: "/men/polo/polo1",
+      element: <Details />,
+      id: 7,
     },
   ];
 

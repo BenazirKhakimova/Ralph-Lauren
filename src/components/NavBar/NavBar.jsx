@@ -48,7 +48,7 @@ const NAV_RIGHT_LIST = [
 ];
 const NavBar = () => {
   return (
-    <div className="navBar">
+    <div className="navigation">
       <div className="primary-logo">
         <Link className="logo-link" to="/">
           <span className="visually-hidden">Ralph Lauren</span>
