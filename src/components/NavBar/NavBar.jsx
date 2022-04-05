@@ -12,13 +12,13 @@ import { contextProduct } from "../../context/ProductContext";
 import Women from "../Women/Women";
 import "./NavBar.css";
 import { Menu } from "antd";
-import Men from "../Men/Men";
+// import Men from "../Men/Men";
 import Search from "../Search/Search";
 import Auth from "../Auth/Auth";
 
 const { SubMenu } = Menu;
 
-let NAV_LIST = [
+export const NAV_LIST = [
   {
     title: "Men",
     link: "/men",
@@ -42,7 +42,6 @@ let NAV_LIST = [
 ];
 
 class NavBar extends React.Component {
-  
   state = {
     current: "mail",
   };
@@ -50,10 +49,10 @@ class NavBar extends React.Component {
   handleClick = (e) => {
     this.setState({ current: e.key });
   };
-  
+
   render() {
     const { current } = this.state;
-   
+
     return (
       <>
         <Menu
@@ -99,16 +98,16 @@ class NavBar extends React.Component {
             </Link>
           </div>
           <div className="nav-right">
-          <Search/>
+            <Search />
             <ShoppingCartOutlined style={{ fontSize: "24px" }} />
             <HeartOutlined style={{ fontSize: "24px" }} />
-            <Auth/>
+            <Auth />
           </div>
         </div>
+        <div>{NAV_LIST.map}</div>
       </>
     );
   }
 }
 
 export default NavBar;
-

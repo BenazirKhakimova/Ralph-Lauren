@@ -79,14 +79,17 @@
   }
 }
 @media only screen and (max-width: 428px) {
+  .thirdSection {
+    height: 100%;
+  }
   .thirdSection-title {
     font-size: 28px;
   }
   .thirdSection-block {
-    flex-direction: column;
+    padding: 0;
   }
   .thirdSection-block1 {
-    padding-top: 5%;
+    padding-top: 0%;
     width: 100%;
   }
   .thirdSection-block2 {

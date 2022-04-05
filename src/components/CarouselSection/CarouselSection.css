@@ -44,3 +44,13 @@
     left: 28%;
   }
 }
+@media only screen and (max-width: 428px) {
+  .carousel {
+    margin-top: 10px;
+    padding-top: 70px;
+  }
+  .carousel-title {
+    left: 18%;
+    top: 0;
+  }
+}

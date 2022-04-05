@@ -66,9 +66,21 @@
   .submenu-title {
     color: black;
   }
+  .visually-hidden-logo {
+    font-size: 20px;
+    color: #231f20;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .nav-right {
+    margin-left: 50px;
+  }
 }
 @media only screen and (max-width: 428px) {
   .nav-right {
-    margin-left: 100px;
+    margin-left: 50px;
+  }
+  .visually-hidden-logo {
+    display: none;
   }
 }

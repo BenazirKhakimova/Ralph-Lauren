@@ -15,10 +15,6 @@ import "./PoloMen.css";
 
 const PoloMen = () => {
   const { products, getProducts } = useContext(contextProduct);
-  const [image, setImage] = useState(false);
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
   const [searchParams, setSearchParams] = useSearchParams();
   useEffect(() => {
     setSearchParams({
@@ -28,7 +24,7 @@ const PoloMen = () => {
   useEffect(() => {
     getProducts();
   }, [searchParams]);
-  
+
   return (
     <div className="collection-blocks">
       <BreadCrumb />
@@ -49,13 +45,14 @@ const PoloMen = () => {
             </div>
           </div>
         ))} */}
-        {products.map((item) => (
-          <Card key={item.id} item={item} />
-        ))}
+        <div className="card-block">
+          {products.map((item) => (
+            <Card key={item.id} item={item} />
+          ))}
+        </div>
       </div>
-      <Pagination/>
+      <Pagination />
     </div>
-    
   );
 };
 

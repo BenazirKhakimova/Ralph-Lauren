@@ -9,10 +9,11 @@ import "./Card.css";
 
 const Card = ({ item }) => {
   const [image, setImage] = useState(false);
+
   return (
     <div className="card">
       <img
-        src={image ? item.image1 : item.image3}
+        src={image ? item.image1 : item.image2}
         onMouseEnter={() => setImage(true)}
         onMouseLeave={() => setImage(false)}
       />
