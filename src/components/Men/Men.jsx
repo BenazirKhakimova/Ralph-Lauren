@@ -3,7 +3,6 @@ import { Carousel } from "antd";
 import "./Men.css";
 import TextHeader from "../Header/TextHeader";
 import ThirdSection from "../ThirdSection/ThirdSection";
-import Card from "../Card/Card";
 import Recommended from "../Recommended/Recommended";
 import { Link } from "react-router-dom";
 
@@ -33,6 +32,7 @@ const Men = () => {
             muted
             className="video-carousel"
             src={item.video}
+            key={item.id}
           />
         ))}
       </Carousel>

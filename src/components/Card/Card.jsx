@@ -1,5 +1,4 @@
 import {
-  DeleteOutlined,
   EllipsisOutlined,
   HeartOutlined,
   ShoppingOutlined,
@@ -10,9 +9,11 @@ import "./Card.css";
 
 const Card = ({ item }) => {
   const [image, setImage] = useState(false);
+
   return (
     <div className="card">
       <img
+        className="card-image"
         src={image ? item.image1 : item.image2}
         onMouseEnter={() => setImage(true)}
         onMouseLeave={() => setImage(false)}

@@ -9,7 +9,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { Menu } from "antd";
-import Men from "../Men/Men";
 
 const { SubMenu } = Menu;
 
@@ -61,12 +60,15 @@ class NavBar extends React.Component {
           >
             <Menu.ItemGroup>
               {NAV_LIST.map((item) => (
-                <Link to={item.link}>
+                <Link to={item.link} key={item.id}>
                   <Menu.Item>{item.title}</Menu.Item>
                 </Link>
               ))}
             </Menu.ItemGroup>
           </SubMenu>
+          <Link className="logo-link" to="/">
+            <span className="visually-hidden-logo">Ralph Lauren</span>
+          </Link>
           <div className="nav-right">
             <SearchOutlined style={{ fontSize: "22px" }} />
             <ShoppingCartOutlined style={{ fontSize: "22px" }} />
