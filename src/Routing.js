@@ -12,7 +12,7 @@ import Women from "./components/Women/Women";
 import SweatersMen from "./components/SweatersMen/SweatersMen";
 import FootwearMen from "./components/FootwearMen/FootwearMen";
 import PoloMen from "./components/PoloMen/PoloMen";
-import DetailsProduct from "./DetailsProduct/DetailsProduct";
+import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -47,7 +47,7 @@ const Routing = () => {
     },
     {
       link: "/details/:id",
-      element: <DetailsProduct />,
+      element: <DetailsProduct/>,
       id: 7,
     },
   ];

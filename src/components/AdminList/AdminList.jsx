@@ -2,8 +2,8 @@ import React, {  useEffect, useContext } from "react";
 import { List, Avatar, Popconfirm,  message } from "antd";
 import VirtualList from "rc-virtual-list";
 import { Link } from "react-router-dom";
-import { contextProduct } from "../../context/ProductContext";
 import "./AdminList.css";
+import { contextProduct } from "../../context/ProductContext";
 
 
 const AdminList = () => {
@@ -12,12 +12,6 @@ const AdminList = () => {
   useEffect(() => {
     getProducts();
   }, []);
-
-//   const text = "Are you sure to delete this task?";
-
-//   function confirm() {
-//     message.info("The product has been removed.");
-//   }
 
   return (
     <>

@@ -1,14 +1,13 @@
 import React from "react";
-import CreateProduct from "../CreateProduct/CreateProduct";
 import AdminList from "../components/AdminList/AdminList";
-import Pagination from "../components/Pagination/Pagination";
+import CreateProduct from "../components/CreateProduct/CreateProduct";
+
 // import "./AdminPage.css";
 const AdminPage = () => {
   return (
     <div className="pages-mt">
-      <CreateProduct />
+      <CreateProduct/>
       <AdminList />
-      {/* <Pagination/> */}
     </div>
   );
 };

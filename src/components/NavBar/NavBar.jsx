@@ -1,4 +1,5 @@
 import {
+  AlignLeftOutlined,
   HeartOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
@@ -10,6 +11,12 @@ import { Link, useSearchParams } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
 import Women from "../Women/Women";
 import "./NavBar.css";
+import { Menu } from "antd";
+import Men from "../Men/Men";
+import Search from "../Search/Search";
+import Auth from "../Auth/Auth";
+
+const { SubMenu } = Menu;
 
 let NAV_LIST = [
   {
@@ -34,83 +41,74 @@ let NAV_LIST = [
   },
 ];
 
-const NavBar = () => {
-  const [visible, setVisible] = useState(false);
+class NavBar extends React.Component {
+  
+  state = {
+    current: "mail",
+  };
 
-  const {getProducts} = useContext(contextProduct)
-  const [searchParams, setSearchParams] = useSearchParams()
-  const [searchValue, setSearchValue] = useState(searchParams.get('q') ? searchParams.get('q') : '')
-
-  useEffect(()=>{
-      getProducts()
-  },[])
-
-  useEffect(()=>{
-      setSearchParams({
-          q: searchValue
-      })
-  }, [searchValue])
-
-  useEffect(()=>
-        getProducts(), 
-  [searchParams])
-
-  return (
-    <div className="navigation">
-      <div className="primary-logo">
-        <Link className="logo-link" to="/">
-          <span className="visually-hidden">Ralph Lauren</span>
-        </Link>
-      </div>
-      <div className="navbar">
-        {NAV_LIST.map((item) => (
-          <Link className="nav-item logo-link" to={item.link} key={item.id}>
-            {item.title}
-          </Link>
-        ))}
-        <Link to="/admin" className="nav-item logo-link">
-          ADMIN
-        </Link>
-      </div>
-      <div className="nav-right">
-      <div>
-        <SearchOutlined style={{ fontSize: "24px" }} onClick={() => setVisible(true)}/>
-        <Modal
-        centered
-        visible={visible}
-        onOk={() => setVisible(false)}
-        onCancel={() => setVisible(false)}
-        width="100%"
-        footer={null}
-        className='search-navbar'
-       >
-      <div className='input-content' style={{}}>
-
-        <Input.Search placeholder='Search...' 
-        style={{ width: "50%", marginLeft: '25%',  }} 
-        value={searchValue} 
-        onChange={(e) => setSearchValue(e.target.value)} />
-
-        <br/>
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <Link to='/men'>
-        <Button  onClick={()=> setVisible(false)} 
-        style={{backgroundColor: '#041e3a', color: 'white', borderRadius: '2rem', margin: '10px' , width: '100px', textAlign: 'center'}}>Men</Button>
-</Link>
-<Link to='/women'>
-        <Button onClick={()=> setVisible(false)} 
-        style={{backgroundColor: '#041e3a', color: 'white', borderRadius: '2rem', width: '100px', textAlign: 'center'}}>Women</Button>
-        </Link>
+  handleClick = (e) => {
+    this.setState({ current: e.key });
+  };
+  
+  render() {
+    const { current } = this.state;
+   
+    return (
+      <>
+        <Menu
+          onClick={this.handleClick}
+          selectedKeys={[current]}
+          mode="horizontal"
+          className="menu"
+        >
+          <SubMenu
+            key="SubMenu"
+            title={<AlignLeftOutlined className="submenu-title" />}
+            className="subMenu"
+          >
+            <Menu.ItemGroup>
+              {NAV_LIST.map((item) => (
+                <Link to={item.link}>
+                  <Menu.Item>{item.title}</Menu.Item>
+                </Link>
+              ))}
+            </Menu.ItemGroup>
+          </SubMenu>
+          <div className="nav-right">
+            <SearchOutlined style={{ fontSize: "22px" }} />
+            <ShoppingCartOutlined style={{ fontSize: "22px" }} />
+            <HeartOutlined style={{ fontSize: "22px" }} />
+            <UserOutlined style={{ fontSize: "22px" }} />
+          </div>
+        </Menu>
+        <div className="navigation">
+          <div className="primary-logo">
+            <Link className="logo-link" to="/">
+              <span className="visually-hidden">Ralph Lauren</span>
+            </Link>
+          </div>
+          <div className="navbar">
+            {NAV_LIST.map((item) => (
+              <Link className="nav-item logo-link" to={item.link} key={item.id}>
+                {item.title}
+              </Link>
+            ))}
+            <Link to="/admin" className="nav-item logo-link">
+              ADMIN
+            </Link>
+          </div>
+          <div className="nav-right">
+          <Search/>
+            <ShoppingCartOutlined style={{ fontSize: "24px" }} />
+            <HeartOutlined style={{ fontSize: "24px" }} />
+            <Auth/>
+          </div>
         </div>
-        </div>
-      </Modal>
-        </div>
-        <ShoppingCartOutlined style={{ fontSize: "24px" }} />
-        <HeartOutlined style={{ fontSize: "24px" }} />
-        <UserOutlined style={{ fontSize: "24px" }} />
-      </div>
-    </div>
-  );
-};
+      </>
+    );
+  }
+}
 
 export default NavBar;
+

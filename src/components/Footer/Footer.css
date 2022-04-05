@@ -50,3 +50,18 @@
   padding-top: 70px;
   font-weight: 600;
 }
+@media only screen and (max-width: 1024px) {
+  .footer-blocks {
+    flex-direction: column;
+  }
+  .footer-block {
+    padding-top: 50px;
+  }
+  .footer-block-title {
+    font-size: 18px;
+  }
+  .footer-block-items {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+}

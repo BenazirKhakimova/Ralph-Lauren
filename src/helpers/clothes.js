@@ -1,56 +1,29 @@
-export const clothes = [
-  {
-    clothe: "SWEATERS",
-    id: 1,
-  },
-  {
-    clothe: "FOOTWEAR",
-    id: 2,
-  },
-  {
-    clothe: "POLO SHIRTS",
-    id: 3,
-  },
-  {
-    clothe: "DRESSES",
-    id: 4,
-  },
-  {
-    clothe: "HANDBAGS",
-    id: 5,
-  },
-  {
-    clothe: "JACKETS",
-    id: 6,
-  },
-];
-
-export const men = [
+export const clothesForMen = [
     {
-      clothes: "SWEATERS",
+      type: "SWEATERS",
       id: 7,
     },
     {
-      clothes: "FOOTWEAR",
+      type: "FOOTWEAR",
       id: 8,
     },
     {
-      clothes: "POLO SHIRTS",
+      type: "POLO SHIRTS",
       id: 9,
     }
 ]
 
-export const women = [
+export const clothesForWomen = [
   {
-    clothe: "DRESSES",
+  type: "DRESSES",
     id: 10,
   },
   {
-    clothe: "HANDBAGS",
+  type: "HANDBAGS",
     id: 11,
   },
   {
-    clothe: "JACKETS",
+  type: "JACKETS",
     id: 12,
   }
 ]

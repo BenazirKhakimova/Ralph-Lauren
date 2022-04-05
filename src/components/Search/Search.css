@@ -1,0 +1,19 @@
+.search-navbar{
+    position: absolute !important;
+    top: 80px !important;
+    right: 15px;
+
+}
+.btn-search-inp{
+    display: flex;
+     align-items: center; 
+     justify-content: center
+}
+.btn-search{
+    background-color: #041e3a !important;
+     color: white !important; 
+     border-radius: 2rem !important; 
+     margin: 10px !important; 
+     width: 100px !important; 
+     text-align: center !important;
+}

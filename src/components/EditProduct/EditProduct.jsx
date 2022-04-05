@@ -2,7 +2,7 @@ import { Button, Col, Form, Input, InputNumber, Select } from "antd";
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
-import { clothes } from "../../helpers/clothes";
+
 
 const EditProduct = () => {
   const { getOneProduct, oneProduct, upDateProduct } =
@@ -24,9 +24,10 @@ const EditProduct = () => {
   };
   return (
       <>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Col span={12}>
     <div style={{margin: '85px 25px'}}>
-      <h1 style={{color: 'black'}} >Edit product</h1>
+      <h1 style={{color: 'black', fontFamily: 'LeJeuneDeck'}} >Edit product</h1>
       <Form size='large' layout="vertical" name="basic" form={form} onFinish={save}>
         <Form.Item
           label="Brand"
@@ -40,24 +41,6 @@ const EditProduct = () => {
           
         >
           <Input style={{color: 'black'}}s />
-        </Form.Item>
-        <Form.Item
-          label="Clothes"
-          name="clothes"
-          rules={[
-            {
-              required: true,
-              message: "Please input clothes!",
-            },
-          ]}
-        >
-          <Select>
-            {clothes.map((item) => (
-              <Select.Option key={item.id} value={item.clothe}>
-                {item.clothe}
-              </Select.Option>
-            ))}
-          </Select>
         </Form.Item>
         <Form.Item
           label="Title"
@@ -131,14 +114,17 @@ const EditProduct = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
+        <div>
+        <Form.Item style={{display: 'flex', justifyContent: 'flex-end'}}>
+          <Button  style={{backgroundColor: '#041e3a', color: 'white' }} htmlType="submit">
             Save
           </Button>
         </Form.Item>
+        </div>
       </Form>
     </div>
     </Col>
+    </div>
     </>
   );
 };

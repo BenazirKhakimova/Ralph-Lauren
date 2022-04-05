@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
 import { Button, Modal, Input, Form, InputNumber, Select } from "antd";
-import { contextProduct } from "../context/ProductContext";
-import { clothes } from "../helpers/clothes";
+import { clothes } from "../../helpers/clothes";
+import { contextProduct } from "../../context/ProductContext";
 
 const CreateProduct = () => {
   const { createProduct } = useContext(contextProduct);
@@ -55,24 +55,6 @@ const CreateProduct = () => {
             ]}
           >
             <Input />
-          </Form.Item>
-          <Form.Item
-            label="Clothes"
-            name="clothes"
-            rules={[
-              {
-                required: true,
-                message: "Please input clothes!",
-              },
-            ]}
-          >
-            <Select>
-              {clothes.map((item) => (
-                <Select.Option key={item.id} value={item.clothe}>
-                  {item.clothe}
-                </Select.Option>
-              ))}
-            </Select>
           </Form.Item>
           <Form.Item
             label="Title"
