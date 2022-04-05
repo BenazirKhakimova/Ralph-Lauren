@@ -51,7 +51,7 @@ const PoloMen = () => {
           ))}
         </div>
       </div>
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   );
 };

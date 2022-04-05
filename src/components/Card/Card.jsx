@@ -13,7 +13,7 @@ const Card = ({ item }) => {
   return (
     <div className="card">
       <img
-        src={image ? item.image1 : item.image2}
+        src={image ? item.image3 : item.image1}
         onMouseEnter={() => setImage(true)}
         onMouseLeave={() => setImage(false)}
       />
