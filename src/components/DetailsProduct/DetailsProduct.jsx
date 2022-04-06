@@ -24,11 +24,11 @@ const DetailsProduct = () => {
         }}
       >
         <div style={{ width: "35vw" }}>
-          <Carousel style={{ height: "700px", width: "90%" }} autoplay>
+          <Carousel style={{ height: "700px", width: "100%" }} autoplay>
             <div>
               <img
                 style={{ height: "700px" }}
-                width="90%"
+                width="100%"
                 src={oneProduct.image1}
                 alt=""
               />
@@ -36,7 +36,7 @@ const DetailsProduct = () => {
             <div>
               <img
                 style={{ height: "700px" }}
-                width="90%"
+                width="100%"
                 src={oneProduct.image2}
                 alt=""
               />

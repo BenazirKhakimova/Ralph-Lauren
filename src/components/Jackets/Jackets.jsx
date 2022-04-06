@@ -1,4 +1,11 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { contextProduct } from "../../context/ProductContext";
+import BreadCrumb from "../BreadCrumb/BreadCrumb";
+import Card from "../Card/Card";
+import Collection from "../Collection/Collection";
+import { Empty, Pagination } from "antd";
+import Filters from "../Filter/Filter";
 
 const Jackets = () => {
   const { products, getProducts, productsCount } = useContext(contextProduct);
