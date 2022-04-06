@@ -78,8 +78,6 @@ const Men = () => {
         <p className="men-shop-text2">The resort Collection</p>
       </div>
       <ThirdSection />
-
-      <FormOfPayment />
       {/* <Recommended /> */}
     </div>
   );

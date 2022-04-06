@@ -1,5 +1,6 @@
 import { Button, InputNumber, List } from "antd";
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import "./Cart.css";
 const Cart = () => {
@@ -77,7 +78,9 @@ const Cart = () => {
                   >
                     Remove from cart
                   </Button>
-                  <Button className="btn-art">Buy now</Button>
+                  <Link to={"/payment"}>
+                    <Button className="btn-art">Buy now</Button>
+                  </Link>
                 </>
               }
             />

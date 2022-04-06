@@ -4,16 +4,16 @@ const FormOfPayment = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-  const [state, setState] = useState("");
   const [zip, setZip] = useState("");
   function handleChange() {
-    if (!name || !email || !address || !state || !zip) {
+    if (!name || !email || !address || !zip) {
       alert("OK!");
-    } else "Fill In";
+    } else {
+      alert("Fill In");
+    }
     setName("");
     setEmail("");
     setAddress("");
-    setState("");
     setZip("");
   }
 
@@ -59,12 +59,7 @@ const FormOfPayment = () => {
                 <div className="inputBox">
                   <span>state:</span>
 
-                  <input
-                    type="text"
-                    value={state}
-                    onChange={(e) => setState(e.target.value)}
-                    placeholder="Kyrgyzstan"
-                  />
+                  <input type="text" placeholder="Kyrgyzstan" />
                 </div>
                 <div className="inputBox">
                   <span>zip code:</span>

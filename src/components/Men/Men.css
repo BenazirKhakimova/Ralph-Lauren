@@ -71,6 +71,12 @@
     font-size: 28px;
   }
   .text-header {
-    margin-top: -40%;
+    display: none !important;
+  }
+  .men-shop__block {
+    max-width: 300px;
+  }
+  .men-shop__block p {
+    font-size: 26px;
   }
 }
