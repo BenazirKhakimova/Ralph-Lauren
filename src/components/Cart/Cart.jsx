@@ -18,7 +18,14 @@ const Cart = () => {
         footer={<h2>Total: ${cart.totalPrice}</h2>}
         renderItem={(item) => (
           <List.Item
-            extra={<img src={item.item.image1} alt="img" width={272} />}
+            extra={
+              <img
+                src={item.item.image1}
+                alt="img"
+                width={272}
+                className="cart-img"
+              />
+            }
           >
             <List.Item.Meta
               title={
@@ -31,14 +38,17 @@ const Cart = () => {
                 >
                   <div>
                     <h3>{item.item.brand}</h3>
-                    <h4>{item.item.title}</h4>
+                    <h2>{item.item.title}</h2>
                   </div>
                   <h3>{"$" + item.item.price}</h3>
                 </div>
               }
               description={
                 <>
-                  <div>{item.item.description}</div>
+                  <div>
+                    {" "}
+                    <h4>{item.item.description}</h4>
+                  </div>
                   <div
                     style={{
                       display: "flex",
@@ -50,7 +60,7 @@ const Cart = () => {
                     <div>
                       <h4>Quantity</h4>
                       <Button
-                        className="btn-art"
+                        className="btn-cart"
                         onClick={() =>
                           changeProductCount(item.count - 1, item.item.id)
                         }
@@ -59,7 +69,7 @@ const Cart = () => {
                       </Button>
                       <InputNumber disabled value={item.count} />
                       <Button
-                        className="btn-art"
+                        className="btn-cart"
                         onClick={() =>
                           changeProductCount(item.count + 1, item.item.id)
                         }
@@ -73,14 +83,18 @@ const Cart = () => {
                     </div>
                   </div>
                   <Button
-                    className="btn-art"
+                    className="btn-delete"
                     onClick={() => deleteFromCart(item.item.id)}
                   >
                     Remove from cart
                   </Button>
+<<<<<<< HEAD
                   <Link to={"/payment"}>
                     <Button className="btn-art">Buy now</Button>
                   </Link>
+=======
+                  <Button className="btn-buy-now">Buy now</Button>
+>>>>>>> f089a303c4e9d38098dcaf3a2afff00fe97c1c5f
                 </>
               }
             />

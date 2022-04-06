@@ -36,6 +36,12 @@ class NavBar extends React.Component {
   handleClick = (e) => {
     this.setState({ current: e.key });
   };
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(nextProps, nextState);
+    console.log(this.props, this.state);
+
+    return false;
+  }
 
   render() {
     const { current } = this.state;
