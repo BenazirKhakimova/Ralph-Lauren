@@ -40,7 +40,7 @@ const Men = () => {
       <div className="men-shop container">
         <h1 className="men-shop__title">Men: Shop by Category</h1>
         <div className="men-shop__blocks">
-          <Link to="/men/sweaters">
+          <Link to="/sweaters">
             <div className="men-shop__block">
               <img
                 src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02b_img.jpg"
@@ -50,7 +50,7 @@ const Men = () => {
               <p>sweaters</p>
             </div>
           </Link>
-          <Link to="/men/footwear">
+          <Link to="/footwear">
             <div className="men-shop__block">
               <img
                 src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/en_US/v1648808154513/img/202203/20220329-mens-lp-top/0329_mlp_m_c02c_img.jpg"

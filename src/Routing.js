@@ -13,6 +13,9 @@ import SweatersMen from "./components/SweatersMen/SweatersMen";
 import FootwearMen from "./components/FootwearMen/FootwearMen";
 import PoloMen from "./components/PoloMen/PoloMen";
 import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
+import Dresses from "./components/Dresses/Dresses";
+import Handbags from "./components/Handbags/Handbags";
+import Jackets from "./components/Jackets/Jackets";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -47,8 +50,23 @@ const Routing = () => {
     },
     {
       link: "/details/:id",
-      element: <DetailsProduct/>,
+      element: <DetailsProduct />,
       id: 7,
+    },
+    {
+      link: "/dresses",
+      element: <Dresses />,
+      id: 8,
+    },
+    {
+      link: "/handbags",
+      element: <Handbags />,
+      id: 9,
+    },
+    {
+      link: "/jackets",
+      element: <Jackets />,
+      id: 10,
     },
   ];
 

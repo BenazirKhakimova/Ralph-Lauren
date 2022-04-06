@@ -34,14 +34,23 @@
   text-decoration: none;
   cursor: pointer;
 }
+.navbar-item-active {
+  margin: 5px 15px;
+  color: black;
+  border-bottom: 1px solid grey;
+}
+.nav-item:hover {
+ color: rgb(0, 0, 0);
+}
 .nav_icons {
   width: 25px;
   height: 25px;
 }
 .nav-right {
-  width: 180px;
+  width: 220px;
   display: flex;
   justify-content: space-between;
+  padding-right: 15px;
 }
 .subMenu {
   display: none !important;

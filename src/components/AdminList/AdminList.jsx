@@ -1,10 +1,9 @@
-import React, {  useEffect, useContext } from "react";
-import { List, Avatar, Popconfirm,  message } from "antd";
+import React, { useEffect, useContext } from "react";
+import { List, Avatar, Popconfirm, message } from "antd";
 import VirtualList from "rc-virtual-list";
 import { Link } from "react-router-dom";
 import "./AdminList.css";
 import { contextProduct } from "../../context/ProductContext";
-
 
 const AdminList = () => {
   const { getProducts, products, deleteProduct } = useContext(contextProduct);
@@ -26,7 +25,7 @@ const AdminList = () => {
             {(item) => (
               <List.Item key={item.id} style={{ margin: "5px" }}>
                 <List.Item.Meta
-                  avatar={<Avatar src={item.image1} />}
+                  avatar={<Avatar src={item.image1} size="large" />}
                   title={
                     <span
                       href="#"
@@ -42,19 +41,19 @@ const AdminList = () => {
                     </span>
                   }
                 />
-                  <span
-                    style={{
-                      color: "#041E3A",
-                      cursor: "pointer",
-                      fontSize: "large",
-                      fontWeight: 900,
-                      fontFamily: "LeJeuneDeck",
-                    }}
-                    href="#"
-                    onClick={()=>deleteProduct(item.id)}
-                  >
-                    Delete
-                  </span>
+                <span
+                  style={{
+                    color: "#041E3A",
+                    cursor: "pointer",
+                    fontSize: "large",
+                    fontWeight: 900,
+                    fontFamily: "LeJeuneDeck",
+                  }}
+                  href="#"
+                  onClick={() => deleteProduct(item.id)}
+                >
+                  Delete
+                </span>
 
                 <Link
                   to={`/edit/${item.id}`}

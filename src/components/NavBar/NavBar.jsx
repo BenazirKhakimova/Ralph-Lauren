@@ -1,6 +1,7 @@
 import {
   AlignLeftOutlined,
   HeartOutlined,
+  LogoutOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
   UserOutlined,
@@ -15,6 +16,9 @@ import { Menu } from "antd";
 // import Men from "../Men/Men";
 import Search from "../Search/Search";
 import Auth from "../Auth/Auth";
+import CurrentUser from "../CurrentUser/CurrentUser";
+import { ADMIN_EMAIL } from "../../helpers/consts";
+import { authContext } from "../../context/authContext";
 
 const { SubMenu } = Menu;
 
@@ -29,16 +33,16 @@ export const NAV_LIST = [
     link: "/women",
     id: 2,
   },
-  {
-    title: "Home",
-    link: "/home",
-    id: 3,
-  },
-  {
-    title: "Sale",
-    link: "/sale",
-    id: 4,
-  },
+  // {
+  //   title: "Home",
+  //   link: "/home",
+  //   id: 3,
+  // },
+  // {
+  //   title: "Sale",
+  //   link: "/sale",
+  //   id: 4,
+  // },
 ];
 
 class NavBar extends React.Component {
@@ -52,7 +56,6 @@ class NavBar extends React.Component {
 
   render() {
     const { current } = this.state;
-
     return (
       <>
         <Menu
@@ -93,18 +96,14 @@ class NavBar extends React.Component {
                 {item.title}
               </Link>
             ))}
-            <Link to="/admin" className="nav-item logo-link">
-              ADMIN
-            </Link>
           </div>
           <div className="nav-right">
             <Search />
             <ShoppingCartOutlined style={{ fontSize: "24px" }} />
             <HeartOutlined style={{ fontSize: "24px" }} />
-            <Auth />
+            <CurrentUser />
           </div>
         </div>
-        <div>{NAV_LIST.map}</div>
       </>
     );
   }

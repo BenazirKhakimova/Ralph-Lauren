@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
-
-import { Button, Modal, Input, Form, InputNumber, Select } from "antd";
-import { clothes } from "../../helpers/clothes";
+import { Button, Modal, Input, Form, InputNumber } from "antd";
 import { contextProduct } from "../../context/ProductContext";
 
 const CreateProduct = () => {
@@ -35,7 +33,6 @@ const CreateProduct = () => {
       >
         Add Product
       </Button>
-      {/* brand , title, price, description, image1, image2, image3, video , clothes*/}
       <Modal
         title="Basic Modal"
         visible={isModalVisible}

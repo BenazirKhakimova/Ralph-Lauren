@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import "./Women.css";
 import TextHeader from "../Header/TextHeader";
 import ThirdSection from "../ThirdSection/ThirdSection";
+import { Link } from "react-router-dom";
 
 const arrayVideos = [
   {
@@ -33,30 +34,36 @@ const Women = () => {
       <div className="women-shop container">
         <h1 className="women-shop__title">Women: Shop by Category</h1>
         <div className="women-shop__blocks">
-          <div className="women-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dwbb6238e8/img/202203/20220329-womens-lp/0329_wlp_m_c02a_img.jpg"
-              alt=""
-              className="women-shop__img"
-            />
-            <p>Dresses</p>
-          </div>
-          <div className="women-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw0facf9bc/img/202203/20220329-womens-lp/0329_wlp_m_c02e_img.jpg"
-              alt=""
-              className="women-shop__img"
-            />
-            <p>Footwear</p>
-          </div>
-          <div className="women-shop__block">
-            <img
-              src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dwc64a0e2f/img/202203/20220329-womens-lp/0329_wlp_m_c02f_img.jpg"
-              alt=""
-              className="men-shop__img"
-            />
-            <p>Polo shirts</p>
-          </div>
+          <Link to="/dresses">
+            <div className="women-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dwbb6238e8/img/202203/20220329-womens-lp/0329_wlp_m_c02a_img.jpg"
+                alt=""
+                className="women-shop__img"
+              />
+              <p>Dresses</p>
+            </div>
+          </Link>
+          <Link to="/handbags">
+            <div className="women-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw0facf9bc/img/202203/20220329-womens-lp/0329_wlp_m_c02e_img.jpg"
+                alt=""
+                className="women-shop__img"
+              />
+              <p>Handbags</p>
+            </div>
+          </Link>
+          <Link to="/jackets">
+            <div className="women-shop__block">
+              <img
+                src="https://www.ralphlauren.com/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dwc64a0e2f/img/202203/20220329-womens-lp/0329_wlp_m_c02f_img.jpg"
+                alt=""
+                className="men-shop__img"
+              />
+              <p>Jackets</p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="women-shop-block2">

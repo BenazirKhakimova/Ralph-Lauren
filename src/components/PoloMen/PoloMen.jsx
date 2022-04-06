@@ -1,26 +1,39 @@
-import {
-  DeleteOutlined,
-  EllipsisOutlined,
-  HeartOutlined,
-  ShoppingOutlined,
-} from "@ant-design/icons";
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { contextProduct } from "../../context/ProductContext";
 import BreadCrumb from "../BreadCrumb/BreadCrumb";
 import Card from "../Card/Card";
 import Collection from "../Collection/Collection";
-import Pagination from "../Pagination/Pagination";
 import "./PoloMen.css";
+import { Empty, Pagination } from "antd";
+import Filters from "../Filter/Filter";
 
 const PoloMen = () => {
-  const { products, getProducts } = useContext(contextProduct);
+  const { products, getProducts, productsCount } = useContext(contextProduct);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [showFilters, setShowFilters] = useState(false);
+  const [price, setPrice] = useState([1, 500]);
+  const [page, setPage] = useState(
+    searchParams.get("_page") ? searchParams.get("_page") : 1
+  );
+  const [limit, setLimit] = useState(3);
+  useEffect(() => {
+    getProducts();
+  }, []);
   useEffect(() => {
     setSearchParams({
       type: "polo",
     });
   }, []);
+  useEffect(() => {
+    setSearchParams({
+      type: "polo",
+      price_gte: price[0],
+      price_lte: price[1],
+      _page: page,
+      _limit: limit,
+    });
+  }, [price, page, limit]);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -29,29 +42,38 @@ const PoloMen = () => {
     <div className="collection-blocks">
       <BreadCrumb />
       <h1 className="polo-title collection-title">Men's Polo Shirts</h1>
+
       <div className="polo collection-block">
         <Collection />
-        {/* {products.map((item) => (
-          <div className="card" key={item.id}>
-            <div className="card-img">
-              <img
-                src={image ? item.image1 : item.image2}
-                onMouseEnter={() => setImage(true)}
-                onMouseLeave={() => setImage(false)}
-                alt=""
-              />
-            </div>
-           
-            </div>
+        <div>
+          <div
+            style={{ cursor: "pointer", marginLeft: "4.5%" }}
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            {showFilters ? <h3>HIDE FILTERS</h3> : <h3>SHOW FILTERS</h3>}
+            {showFilters ? <Filters price={price} setPrice={setPrice} /> : null}
           </div>
-        ))} */}
+        </div>
         <div className="card-block">
-          {products.map((item) => (
-            <Card key={item.id} item={item} />
-          ))}
+          {products.length > 0 ? (
+            products.map((item) => <Card key={item.id} item={item} />)
+          ) : (
+            <Empty />
+          )}
         </div>
       </div>
-      <Pagination />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Pagination
+          total={+productsCount}
+          current={+page}
+          pageSize={+limit}
+          defaultCurrent={1}
+          onChange={(page, limit) => {
+            setPage(page);
+            setLimit(limit);
+          }}
+        />
+      </div>
     </div>
   );
 };

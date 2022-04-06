@@ -1,15 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { contextProduct } from "../../context/ProductContext";
-import BreadCrumb from "../BreadCrumb/BreadCrumb";
-import Card from "../Card/Card";
-import Collection from "../Collection/Collection";
-import { Empty, Pagination } from "antd";
-import Filters from "../Filter/Filter";
+import React from "react";
 
-import "./SweatersMen.css";
-
-const SweatersMen = () => {
+const Jackets = () => {
   const { products, getProducts, productsCount } = useContext(contextProduct);
   const [searchParams, setSearchParams] = useSearchParams();
   const [showFilters, setShowFilters] = useState(false);
@@ -21,9 +12,10 @@ const SweatersMen = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
   useEffect(() => {
     setSearchParams({
-      type: "sweater",
+      type: "jackets",
       price_gte: price[0],
       price_lte: price[1],
       _page: page,
@@ -37,9 +29,9 @@ const SweatersMen = () => {
   return (
     <div className="collection-blocks">
       <BreadCrumb />
-      <h1 className="sweater collection-title">Men's Polo Shirts</h1>
+      <h1 className="dresses collection-title">Men's Polo Shirts</h1>
 
-      <div className="sweater collection-block">
+      <div className="dresses collection-block">
         <Collection />
         <div>
           <div
@@ -74,4 +66,4 @@ const SweatersMen = () => {
   );
 };
 
-export default SweatersMen;
+export default Jackets;

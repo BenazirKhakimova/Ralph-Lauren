@@ -12,16 +12,18 @@ const Card = ({ item }) => {
 
   return (
     <div className="card">
-      <img
-        src={image ? item.image1 : item.image2}
-        onMouseEnter={() => setImage(true)}
-        onMouseLeave={() => setImage(false)}
-      />
+      <Link to={`/details/${item.id}`}>
+        <img
+          src={image ? item.image3 : item.image1}
+          onMouseEnter={() => setImage(true)}
+          onMouseLeave={() => setImage(false)}
+        />
+      </Link>
       <h1 className="card-title">{item.brand}</h1>
       <a href="#" className="card-desc">
         {item.title}
       </a>
-      <h2 className="card-price">{item.price}</h2>
+      <h2 className="card-price">{"$" + item.price}</h2>
       <div className="card-footer">
         <HeartOutlined className="icon-card" />
         <Link to={`/details/${item.id}`}>
