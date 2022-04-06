@@ -21,7 +21,7 @@ const Card = ({ item }) => {
       <a href="#" className="card-desc">
         {item.title}
       </a>
-      <h2 className="card-price">{item.price}</h2>
+      <h2 className="card-price">{"$ " + item.price}</h2>
       <div className="card-footer">
         <HeartOutlined className="icon-card" />
         <Link to={`/details/${item.id}`}>
