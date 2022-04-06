@@ -37,28 +37,39 @@ const Cart = () => {
                   }}
                 >
                   <div>
-                    <h3>{item.item.brand}</h3>
-                    <h2>{item.item.title}</h2>
+                    <h3 style={{ fontFamily: "Northwell", fontSize: "25px" }}>
+                      {item.item.brand}
+                    </h3>
+                    <h2 style={{ fontFamily: "LeJeuneDeck" }}>
+                      {item.item.title}
+                    </h2>
+                    <h3 style={{ fontFamily: "LeJeuneDeck" }}>
+                      {"$" + item.item.price}
+                    </h3>
                   </div>
-                  <h3>{"$" + item.item.price}</h3>
                 </div>
               }
               description={
                 <>
                   <div>
                     {" "}
-                    <h4>{item.item.description}</h4>
+                    <h4 style={{ fontFamily: "Copyright Klim Type Foundry" }}>
+                      {item.item.description}
+                    </h4>
                   </div>
                   <div
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
-                      width: "40%",
                       marginTop: "20px",
                     }}
                   >
                     <div>
-                      <h4>Quantity</h4>
+                      <h4
+                        style={{ fontFamily: " Copyright Klim Type Foundry" }}
+                      >
+                        Quantity
+                      </h4>
                       <Button
                         className="btn-cart"
                         onClick={() =>
@@ -78,8 +89,28 @@ const Cart = () => {
                       </Button>
                     </div>
                     <div>
-                      <h4>SubPrice</h4>
-                      <h3>{"$" + item.subPrice}</h3>
+                      <h4
+                        style={{ fontFamily: " Copyright Klim Type Foundry" }}
+                      >
+                        SubPrice
+                      </h4>
+                      <h3
+                        style={{ fontFamily: " Copyright Klim Type Foundry" }}
+                      >
+                        {"$" + item.subPrice}
+                      </h3>
+                    </div>
+                    <div className="btn-cart-content">
+                      <Button
+                        className="btn-cart-remove"
+                        onClick={() => deleteFromCart(item.item.id)}
+                      >
+                        Remove from cart
+                      </Button>
+
+                      <Link to={"/payment"}>
+                        <Button className="btn-cart-remove">Buy now</Button>
+                      </Link>
                     </div>
                   </div>
                   <Button
@@ -88,13 +119,9 @@ const Cart = () => {
                   >
                     Remove from cart
                   </Button>
-<<<<<<< HEAD
                   <Link to={"/payment"}>
                     <Button className="btn-art">Buy now</Button>
                   </Link>
-=======
-                  <Button className="btn-buy-now">Buy now</Button>
->>>>>>> f089a303c4e9d38098dcaf3a2afff00fe97c1c5f
                 </>
               }
             />

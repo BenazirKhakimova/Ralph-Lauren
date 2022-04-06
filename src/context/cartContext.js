@@ -73,6 +73,7 @@ const CartContextProvider = ({ children }) => {
     }
     cart.totalPrice = calcTotalPrice(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
+    getCart();
   }
   function checkItemInCart(id) {
     let cart = JSON.parse(localStorage.getItem("cart"));
