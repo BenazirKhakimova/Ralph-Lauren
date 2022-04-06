@@ -160,6 +160,7 @@
 .card-block {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 1024px) {
   .text-header {
@@ -182,6 +183,12 @@
   .text-header-bottom {
     display: none;
   }
+  .polo-title {
+    font-size: 28px;
+  }
+  .breadcrumb {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 428px) {
   .text-header {
@@ -192,5 +199,9 @@
   }
   .text-header-bottom {
     display: none;
+  }
+  .polo-title {
+    margin-bottom: -60px;
+    font-size: 22px;
   }
 }

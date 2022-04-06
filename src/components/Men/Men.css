@@ -57,8 +57,20 @@
   font-family: Northwell;
 }
 @media only screen and (max-width: 1024px) {
+  .text-header {
+    margin-top: -20%;
+  }
 }
 @media only screen and (max-width: 728px) {
+  .men-shop__blocks {
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 428px) {
+  .men-shop__title {
+    font-size: 28px;
+  }
+  .text-header {
+    margin-top: -40%;
+  }
 }
