@@ -3,13 +3,15 @@ import {
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../context/cartContext";
 import "./Card.css";
 
 const Card = ({ item }) => {
   const [image, setImage] = useState(false);
-
+  const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const [checkItem, setCheckItem] = useState(checkItemInCart(item.id));
   return (
     <div className="card">
       <img
@@ -31,7 +33,15 @@ const Card = ({ item }) => {
             className="icon-card"
           />
         </Link>
-        <ShoppingOutlined className="icon-card" />
+
+        <ShoppingOutlined
+          className="icon-card"
+          onClick={() => {
+            addProductToCart(item);
+            setCheckItem(checkItemInCart(item.id));
+          }}
+          style={{ fontSize: "25px", color: checkItem ? "red" : "black" }}
+        />
       </div>
     </div>
   );

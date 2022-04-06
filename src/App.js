@@ -1,18 +1,21 @@
-import "./App.css";
 import React from "react";
 import Routing from "./Routing";
-import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import ProductsContextProvider from "./context/ProductContext";
-import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+import CartContextProvider from "./context/cartContext";
 import AuthContextProvider from "./context/authContext";
+
+import "./App.css";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 
 function App() {
   return (
     <div className="App">
-    <AuthContextProvider>
-      <ProductsContextProvider>
-           <Routing />
-      </ProductsContextProvider>
+      <AuthContextProvider>
+        <CartContextProvider>
+          <ProductsContextProvider>
+            <Routing />
+          </ProductsContextProvider>
+        </CartContextProvider>
       </AuthContextProvider>
     </div>
   );
