@@ -4,6 +4,7 @@ import FirstSection from "../FirstSection/FirstSection";
 import ThirdSection from "../ThirdSection/ThirdSection";
 import MoreSection from "../MoreSection/MoreSection";
 import CarouselSection from "../CarouselSection/CarouselSection";
+import FormOfPayment from "../FormOfPayment/FormOfPayment";
 const Homepage = () => {
   return (
     <div>

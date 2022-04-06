@@ -37,7 +37,7 @@ const SweatersMen = () => {
   return (
     <div className="collection-blocks">
       <BreadCrumb />
-      <h1 className="sweater collection-title">Men's Polo Shirts</h1>
+      <h1 className="sweater collection-title">Men's Sweaters</h1>
 
       <div className="sweater collection-block">
         <Collection />

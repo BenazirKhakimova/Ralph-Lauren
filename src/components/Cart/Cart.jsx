@@ -1,5 +1,6 @@
 import { Button, InputNumber, List } from "antd";
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import "./Cart.css";
 const Cart = () => {
@@ -80,14 +81,17 @@ const Cart = () => {
                       <h4>SubPrice</h4>
                       <h3>{"$" + item.subPrice}</h3>
                     </div>
+                    <Button
+                      className="btn-delete"
+                      onClick={() => deleteFromCart(item.item.id)}
+                    >
+                      Remove from cart
+                    </Button>
+
+                    <Link to={"/payment"}>
+                      <Button className="btn-art">Buy now</Button>
+                    </Link>
                   </div>
-                  <Button
-                    className="btn-delete"
-                    onClick={() => deleteFromCart(item.item.id)}
-                  >
-                    Remove from cart
-                  </Button>
-                  <Button className="btn-buy-now">Buy now</Button>
                 </>
               }
             />

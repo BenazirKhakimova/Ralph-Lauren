@@ -5,6 +5,7 @@ import TextHeader from "../Header/TextHeader";
 import ThirdSection from "../ThirdSection/ThirdSection";
 import Recommended from "../Recommended/Recommended";
 import { Link } from "react-router-dom";
+import FormOfPayment from "../FormOfPayment/FormOfPayment";
 
 const arrayVideos = [
   {

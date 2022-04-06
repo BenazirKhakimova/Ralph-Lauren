@@ -16,6 +16,7 @@ const DetailsProduct = () => {
   return oneProduct ? (
     <div className="container">
       <div
+        className="details-block"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -23,27 +24,31 @@ const DetailsProduct = () => {
           marginTop: "80px",
         }}
       >
-        <div style={{ width: "35vw" }}>
-          <Carousel style={{ height: "700px", width: "100%" }} autoplay>
+        <div className="block-1">
+          <Carousel
+            className="carousel-details"
+            style={{ height: "100%", width: "100%" }}
+            autoplay
+          >
             <div>
               <img
-                style={{ height: "700px" }}
-                width="100%"
+                style={{ height: "80%" }}
+                width="80%"
                 src={oneProduct.image1}
                 alt=""
               />
             </div>
             <div>
               <img
-                style={{ height: "700px" }}
-                width="100%"
+                style={{ height: "80%" }}
+                width="80%"
                 src={oneProduct.image2}
                 alt=""
               />
             </div>
           </Carousel>
         </div>
-        <div style={{ width: "40vw" }}>
+        <div className="block-2">
           <h2 className="details-brand">{oneProduct.brand}</h2>
           <h3 className="details-title">{oneProduct.title}</h3>
           <h2 className="details-price">{"$" + oneProduct.price}</h2>

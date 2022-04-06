@@ -36,7 +36,7 @@ const FootwearMen = () => {
   return (
     <div className="collection-blocks">
       <BreadCrumb />
-      <h1 className="footwear collection-title">Men's Polo Shirts</h1>
+      <h1 className="footwear collection-title">Men's Footwear </h1>
 
       <div className="footwear collection-block">
         <Collection />

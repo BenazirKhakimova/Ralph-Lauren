@@ -17,6 +17,7 @@ import Dresses from "./components/Dresses/Dresses";
 import Handbags from "./components/Handbags/Handbags";
 import Jackets from "./components/Jackets/Jackets";
 import Cart from "./components/Cart/Cart";
+import FormOfPayment from "./components/FormOfPayment/FormOfPayment";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -73,6 +74,11 @@ const Routing = () => {
       link: "/cart",
       element: <Cart />,
       id: 11,
+    },
+    {
+      link: "/payment",
+      element: <FormOfPayment />,
+      id: 12,
     },
   ];
 

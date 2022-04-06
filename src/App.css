@@ -204,4 +204,7 @@
     margin-bottom: -60px;
     font-size: 22px;
   }
+  .collection-title {
+    padding-top: -20px;
+  }
 }
