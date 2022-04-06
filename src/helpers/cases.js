@@ -1,3 +1,5 @@
 export const CASE_GET_PRODUCTS = "CASE_GET_PRODUCTS";
 
 export const CASE_GET_ONE_PRODUCT = "CASE_GET_ONE_PRODUCT";
+
+export const CASE_GET_CART = "GET_CART";

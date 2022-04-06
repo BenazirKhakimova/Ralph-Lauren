@@ -16,6 +16,7 @@ import DetailsProduct from "./components/DetailsProduct/DetailsProduct";
 import Dresses from "./components/Dresses/Dresses";
 import Handbags from "./components/Handbags/Handbags";
 import Jackets from "./components/Jackets/Jackets";
+import Cart from "./components/Cart/Cart";
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -67,6 +68,11 @@ const Routing = () => {
       link: "/jackets",
       element: <Jackets />,
       id: 10,
+    },
+    {
+      link: "/cart",
+      element: <Cart />,
+      id: 11,
     },
   ];
 

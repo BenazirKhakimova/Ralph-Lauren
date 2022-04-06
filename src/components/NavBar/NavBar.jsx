@@ -1,24 +1,17 @@
 import {
   AlignLeftOutlined,
   HeartOutlined,
-  LogoutOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Button, Input, Modal } from "antd";
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { contextProduct } from "../../context/ProductContext";
-import Women from "../Women/Women";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { Menu } from "antd";
-// import Men from "../Men/Men";
 import Search from "../Search/Search";
-import Auth from "../Auth/Auth";
 import CurrentUser from "../CurrentUser/CurrentUser";
-import { ADMIN_EMAIL } from "../../helpers/consts";
-import { authContext } from "../../context/authContext";
+import CartNavbar from "../CartNavbar/CartNavbar";
 
 const { SubMenu } = Menu;
 
@@ -33,16 +26,6 @@ export const NAV_LIST = [
     link: "/women",
     id: 2,
   },
-  // {
-  //   title: "Home",
-  //   link: "/home",
-  //   id: 3,
-  // },
-  // {
-  //   title: "Sale",
-  //   link: "/sale",
-  //   id: 4,
-  // },
 ];
 
 class NavBar extends React.Component {
@@ -99,7 +82,7 @@ class NavBar extends React.Component {
           </div>
           <div className="nav-right">
             <Search />
-            <ShoppingCartOutlined style={{ fontSize: "24px" }} />
+            <CartNavbar />
             <HeartOutlined style={{ fontSize: "24px" }} />
             <CurrentUser />
           </div>
