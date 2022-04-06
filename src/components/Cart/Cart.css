@@ -1,6 +1,6 @@
 .btn-cart{
     background-color: #041e3a !important;
-  border-radius: 0;
+  border-radius: 10px !important;
   color: #fff !important;
   cursor: pointer;
   text-align: center;
@@ -8,12 +8,33 @@
   height: auto !important;
   font-size: 22px !important;
   font-weight: 500 !important;
+  font-family: " Copyright Klim Type Foundry"
+}
+.btn-cart-content{
+    margin: 30px;
+     padding-right: 35px 
 }
 .ant-input-number{
     width: 50px !important;
     height: 40px;
     bottom: 7px;
+    border-radius: 10px !important;
+    text-align: center;
+    color: black;
 }
 .cart-img{
 margin-left: 20PX;
+}
+
+.btn-cart-remove{
+    background-color: #041e3a !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    cursor: pointer;
+    text-align: center;
+    width: auto!important;
+    height: 40px !important;
+    font-weight: 500 !important;
+    margin-right: 20px ;
+    font-family: " Copyright Klim Type Foundry"
 }
