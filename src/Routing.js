@@ -18,6 +18,7 @@ import Handbags from "./components/Handbags/Handbags";
 import Jackets from "./components/Jackets/Jackets";
 import Cart from "./components/Cart/Cart";
 import FormOfPayment from "./components/FormOfPayment/FormOfPayment";
+
 const Routing = () => {
   let PUBLIC_ROUTES = [
     {
@@ -107,6 +108,7 @@ const Routing = () => {
         {PUBLIC_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />
         ))}
+
         {ADMIN_ROUTES.map((item) => (
           <Route key={item.id} path={item.link} element={item.element} />
         ))}

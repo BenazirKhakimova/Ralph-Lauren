@@ -12,7 +12,6 @@ import { Menu } from "antd";
 import Search from "../Search/Search";
 import CurrentUser from "../CurrentUser/CurrentUser";
 import CartNavbar from "../CartNavbar/CartNavbar";
-
 const { SubMenu } = Menu;
 
 export const NAV_LIST = [
@@ -36,13 +35,6 @@ class NavBar extends React.Component {
   handleClick = (e) => {
     this.setState({ current: e.key });
   };
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
-    console.log(this.props, this.state);
-
-    return false;
-  }
-
   render() {
     const { current } = this.state;
     return (
@@ -89,7 +81,7 @@ class NavBar extends React.Component {
           <div className="nav-right">
             <Search />
             <CartNavbar />
-            <HeartOutlined style={{ fontSize: "24px" }} />
+            <HeartOutlined style={{ fontSize: "25px" }} />
             <CurrentUser />
           </div>
         </div>

@@ -25,7 +25,8 @@ const Card = ({ item }) => {
       </a>
       <h2 className="card-price">{"$ " + item.price}</h2>
       <div className="card-footer">
-        <HeartOutlined className="icon-card" />
+        <HeartOutlined className="icon-card" style={{ fontSize: "25px" }} />
+
         <Link to={`/details/${item.id}`}>
           <EllipsisOutlined
             key="1"

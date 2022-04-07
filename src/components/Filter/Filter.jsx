@@ -4,7 +4,7 @@ import { Slider } from "antd";
 const Filters = ({ price, setPrice }) => {
   return (
     <div style={{ width: "26%" }}>
-      <p>Price</p>
+      <h3>Filter by price</h3>
       <Slider
         value={price}
         onChange={(e) => setPrice(e)}

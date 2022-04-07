@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 
 const Auth = () => {
-  const { handleLogin, handleSignUp, error } = useContext(authContext);
+  const { handleLogin, handleSignUp, error, currentUser } =
+    useContext(authContext);
   const [isLoginForm, setIsLoginForm] = useState(false);
   const navigate = useNavigate();
   function validatePassword(rule, value, callback) {
@@ -37,80 +38,87 @@ const Auth = () => {
   const onClose = () => {
     setVisible(false);
   };
+  // console.log(currentUser);
 
   return (
     <>
       <UserOutlined style={{ fontSize: "24px" }} onClick={showDrawer} />
-      <Drawer placement="right" onClose={onClose} visible={visible}>
-        {error ? <Alert description={error} type="error" /> : null}
-        <Form
-          name="normal_login"
-          className="login-form"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-        >
-          <Form.Item
-            name="email"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Username!",
-              },
-              {
-                type: "email",
-                message: "Is not valid email!",
-              },
-            ]}
+      <div>
+        <Drawer placement="right" onClose={onClose} visible={visible}>
+          {error ? <Alert description={error} type="error" /> : null}
+          <Form
+            name="normal_login"
+            // className="login-form"
+            initialValues={{
+              remember: true,
+            }}
+            onFinish={onFinish}
           >
-            <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
-            />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Password!",
-              },
-              {
-                validator: validatePassword,
-              },
-            ]}
-          >
-            <Input
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Password"
-            />
-          </Form.Item>
-
-          <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
+            <Form.Item
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your Username!",
+                },
+                {
+                  type: "email",
+                  message: "Is not valid email!",
+                },
+              ]}
             >
-              {isLoginForm ? "Log in" : "Sign up"}
-            </Button>
-            <br />
-            {isLoginForm ? (
-              <>
-                Or{" "}
-                <span onClick={() => setIsLoginForm(false)}>register now!</span>
-              </>
-            ) : (
-              <>
-                Have an account?{" "}
-                <span onClick={() => setIsLoginForm(true)}>Log in</span>
-              </>
-            )}
-          </Form.Item>
-        </Form>
-      </Drawer>
+              {/* <input /> */}
+              {/* <Input /> */}
+              <Input
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                placeholder="Username"
+              />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your Password!",
+                },
+                {
+                  validator: validatePassword,
+                },
+              ]}
+            >
+              <Input
+                prefix={<LockOutlined className="site-form-item-icon" />}
+                type="password"
+                placeholder="Password"
+              />
+            </Form.Item>
+
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button"
+              >
+                {isLoginForm ? "Log in" : "Sign up"}
+              </Button>
+              <br />
+              {isLoginForm ? (
+                <>
+                  Or{" "}
+                  <span onClick={() => setIsLoginForm(false)}>
+                    register now!
+                  </span>
+                </>
+              ) : (
+                <>
+                  Have an account?{" "}
+                  <span onClick={() => setIsLoginForm(true)}>Log in</span>
+                </>
+              )}
+            </Form.Item>
+          </Form>
+        </Drawer>
+      </div>
     </>
   );
 };
