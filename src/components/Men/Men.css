@@ -1,0 +1,82 @@
+.carousel-men {
+  width: 100%;
+}
+.text-header {
+  margin-top: -10%;
+}
+.men-shop {
+  margin-top: 50px;
+}
+.men-shop__title {
+  font-size: 48px;
+  font-weight: 600;
+}
+.men-shop__blocks {
+  display: flex;
+  justify-content: space-between;
+}
+.men-shop__block:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.men-shop__block {
+  margin-bottom: 35px;
+  padding: 25px;
+  max-width: 400px;
+}
+.men-shop__img {
+  width: 100%;
+}
+.men-shop__block p {
+  padding-top: 10px;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.men-shop__block p:hover {
+  color: blueviolet;
+}
+.men-shop-block2 {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("https://sourcingjournal.com/wp-content/uploads/2022/03/morehouseralphlaurencollege.jpg");
+}
+.men-shop-text1 {
+  text-align: center;
+  font-size: 68px;
+  font-weight: 700;
+  color: white;
+  font-family: Cormorant;
+  padding-top: 25%;
+}
+.men-shop-text2 {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  font-family: Northwell;
+}
+@media only screen and (max-width: 1024px) {
+  .text-header {
+    margin-top: -20%;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .men-shop__blocks {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .men-shop__title {
+    font-size: 28px;
+  }
+  .text-header {
+    display: none !important;
+  }
+  .men-shop__block {
+    max-width: 300px;
+  }
+  .men-shop__block p {
+    font-size: 26px;
+  }
+}

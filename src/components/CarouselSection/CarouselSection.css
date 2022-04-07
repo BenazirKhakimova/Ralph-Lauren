@@ -1,0 +1,56 @@
+.img-carousel {
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
+}
+.carousel {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100vh;
+  padding-top: 200px;
+}
+.carousel-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-image: url("./images/carousel-bg.jpg");
+}
+.carousel-title {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  color: white;
+  font-family: Northwell;
+  font-size: 66px;
+}
+@media only screen and (max-width: 1024px) {
+  .carousel {
+    margin-top: 10px;
+    padding-top: 130px;
+  }
+  .carousel-title {
+    left: 32%;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .carousel {
+    margin-top: 10px;
+    padding-top: 130px;
+  }
+  .carousel-title {
+    left: 28%;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .carousel {
+    margin-top: 10px;
+    padding-top: 70px;
+  }
+  .carousel-title {
+    left: 18%;
+    top: 0;
+  }
+}

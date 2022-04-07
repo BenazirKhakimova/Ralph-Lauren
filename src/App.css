@@ -1,4 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  /* font-family: Cormorant; */
+}
 .container {
+  max-width: 80%;
   margin: 0 auto;
-  /* max-widsth: 90; */
+}
+.text-header {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-header-top {
+  max-width: 250px;
+  align-items: center;
+}
+.text-header-top p {
+  text-align: center;
+  font-family: Northwell;
+  font-size: 58px;
+  font-weight: bold;
+  color: white;
+}
+.text-header-bottom {
+  max-width: 400px;
+}
+.text-header-bottom span {
+  font-family: Northwell;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 300;
+  color: white;
+}
+.text-header-bottom p {
+  text-align: center;
+  font-family: Cormorant;
+  font-size: 42px;
+  font-weight: 300;
+  color: white;
+}
+.card-blocks {
+  margin-top: 50px;
+}
+.card-block {
+  display: flex;
+  justify-content: space-between;
+}
+.recommended {
+  text-align: center;
+  font-size: 62px;
+  font-weight: 550;
+}
+.pages-mt {
+  padding: 6%;
+  height: 100%;
+  width: 100%;
+}
+.collection-blocks {
+  background-size: 100%;
+  background-image: url("https://cdn-vzn.yottaa.net/5e18d625d9314057054ee33e/www.ralphlauren.com/v~4b.45/on/demandware.static/-/Sites-RalphLauren_US-Library/default/dw90532b34/img/202105/20210518-m-prl-shop-all-mb/20210518_new_m_shop_all_polo_shirt_c01_mood_banner.jpg?yocs=1_");
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+}
+.collection-block {
+  margin-top: 22%;
+}
+.collection-title {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 62px;
+  font-weight: 550;
+  letter-spacing: 3px;
+  color: white;
+  font-family: Copyright Klim Type Foundry;
+}
+.collections p {
+  padding-top: 10px;
+  font-size: 68px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: black;
+  font-family: Northwell;
+}
+.details-blocks {
+  margin-top: 10%;
+  display: flex;
+}
+.details-block-l {
+  max-width: 70%;
+  display: flex;
+}
+.detail-block-img {
+  width: 100%;
+  padding-left: 15px;
+}
+.card {
+  cursor: pointer;
+  width: 400px;
+  height: 100%;
+  margin: 25px 25px;
+  padding-bottom: 25px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.card-img {
+  width: 100%;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://www.rlmedia.io/is/image/PoloGSI/s7-1429052_alternate10?$plpDeskRF$");
+}
+.card-img:hover {
+  background-image: url("https://www.rlmedia.io/is/image/PoloGSI/s7-1429052_lifestyle?$plpDeskRF$");
+}
+.card-title {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 24px;
+  color: rgb(85, 84, 84);
+  font-family: Copyright Klim Type Foundry;
+  letter-spacing: 1px;
+}
+.card-desc {
+  padding-left: 20px;
+  font-family: Copyright Klim Type Foundry;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.card-price {
+  padding-left: 20px;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  font-family: Le Jeune Deck;
+  font-size: 20px;
+}
+.card-footer {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.icon-card {
+  font-size: 24px;
+}
+.card-block {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .text-header {
+    left: 35%;
+  }
+  .text-header-top p {
+    font-size: 58px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+}
+@media only screen and (max-width: 728px) {
+  .text-header {
+    left: 28%;
+  }
+  .text-header-top p {
+    font-size: 48px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+  .polo-title {
+    font-size: 28px;
+  }
+  .breadcrumb {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .text-header {
+    left: 17%;
+  }
+  .text-header-top p {
+    font-size: 48px;
+  }
+  .text-header-bottom {
+    display: none;
+  }
+  .polo-title {
+    margin-bottom: -60px;
+    font-size: 22px;
+  }
+  .collection-title {
+    padding-top: -20px;
+  }
 }
